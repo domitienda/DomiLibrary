@@ -1,0 +1,14 @@
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Test.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Test.pdb
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\NHibernate.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Twitterizer2.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Common.Logging.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Iesi.Collections.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.pdb
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\NHibernate.xml
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Twitterizer2.xml
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Iesi.Collections.xml
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.pdb

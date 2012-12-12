@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomiLibrary", "DomiLibrary\DomiLibrary.csproj", "{53C51117-475D-4319-BD67-EA915399C7E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchReplaceApp", "SearchReplaceApp\SearchReplaceApp.csproj", "{9AAA0755-E12A-465A-8C72-192A96B96E82}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchReplaceConsole", "SearchReplaceConsole\SearchReplaceConsole.csproj", "{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspartaService", "EspartaService\EspartaService.csproj", "{C41E3F96-459C-409D-9AF2-2255468859D4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomiLibrary.Test", "DomiLibrary.Test\DomiLibrary.Test.csproj", "{7E2649BB-E772-4689-85D7-57E195562F57}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F2E1A9AE-65D7-4B4F-B3E6-5509DA0C4AF4}"
@@ -41,36 +35,6 @@ Global
 		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|x86.ActiveCfg = Release|Any CPU
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Debug|x86.ActiveCfg = Debug|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Debug|x86.Build.0 = Debug|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Release|Any CPU.ActiveCfg = Release|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Release|Mixed Platforms.Build.0 = Release|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Release|x86.ActiveCfg = Release|x86
-		{9AAA0755-E12A-465A-8C72-192A96B96E82}.Release|x86.Build.0 = Release|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Debug|x86.ActiveCfg = Debug|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Debug|x86.Build.0 = Debug|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Release|Any CPU.ActiveCfg = Release|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Release|Mixed Platforms.Build.0 = Release|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Release|x86.ActiveCfg = Release|x86
-		{C10F9386-3BC0-45E3-8A79-ADE09ACB6C9A}.Release|x86.Build.0 = Release|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Debug|x86.ActiveCfg = Debug|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Debug|x86.Build.0 = Debug|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Release|Any CPU.ActiveCfg = Release|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Release|Mixed Platforms.Build.0 = Release|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Release|x86.ActiveCfg = Release|x86
-		{C41E3F96-459C-409D-9AF2-2255468859D4}.Release|x86.Build.0 = Release|x86
 		{7E2649BB-E772-4689-85D7-57E195562F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E2649BB-E772-4689-85D7-57E195562F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E2649BB-E772-4689-85D7-57E195562F57}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
