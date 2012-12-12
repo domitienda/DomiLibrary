@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using Common.Logging;
 
@@ -69,6 +71,17 @@ namespace DomiLibrary.Helper
         }
 
         /// <summary>
+        /// Instancia un nuevo objeto de tipo T y lo rellena con los valores de un datatable
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static IEnumerable<T> Convert<T>(DataTable dt)
+        {
+            return FillProperties<T>(dt);
+        }
+
+        /// <summary>
         /// Instancia un nuevo objeto de tipo T y lo rellena con las propiedades del objeto tipo S
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -91,6 +104,22 @@ namespace DomiLibrary.Helper
         private static T FillProperties<TS, T>(TS source, T target)
         {
             return FillProperties<T>(source, target);
+        }
+
+        private static IEnumerable<T> FillProperties<T>(DataTable dt)
+        {
+            if (dt == null)
+                return null;
+
+            var list = new List<T>();
+            foreach (var row in dt.Rows)
+            {
+                var target = Activator.CreateInstance<T>();
+                var entity = FillProperties(row, target);
+                list.Add(entity);
+            }
+
+            return list;
         }
 
         /// <summary>
