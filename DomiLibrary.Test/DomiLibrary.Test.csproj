@@ -54,6 +54,7 @@
     <Compile Include="Helper\EntityTest\C.cs" />
     <Compile Include="Helper\MemberHelperTest.cs" />
     <Compile Include="Helper\StringHelperTest.cs" />
+    <Compile Include="Helper\ValidationHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
