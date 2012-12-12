@@ -10,4 +10,5 @@ por cualquier clase de negocio.
 En http://net.domitienda.com podréis encontrar tutoriales con explicaciones de cómo utilizar las clases que contiene 
 o cómo montar una arquitectura de una forma sencilla usando como librerías de apoyo Spring.NET y NHibernate.
 
+------------------
 www.domitienda.com
