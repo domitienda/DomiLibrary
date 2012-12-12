@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using Common.Logging;
@@ -106,6 +105,12 @@ namespace DomiLibrary.Helper
             return FillProperties<T>(source, target);
         }
 
+        /// <summary>
+        /// Instancia un nuevo objeto de tipo T y lo rellena con las propiedades del datatable
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dt"></param>
+        /// <returns></returns>
         private static IEnumerable<T> FillProperties<T>(DataTable dt)
         {
             if (dt == null)
@@ -115,7 +120,7 @@ namespace DomiLibrary.Helper
             foreach (var row in dt.Rows)
             {
                 var target = Activator.CreateInstance<T>();
-                var entity = FillProperties(row, target);
+                var entity = FillProperties((DataRow)row, target);
                 list.Add(entity);
             }
 
@@ -144,16 +149,32 @@ namespace DomiLibrary.Helper
                     if(targetProperty == null) continue;
 
                     var targetValue = dr[((DataColumn) column).ColumnName];
-                    if (targetValue is DBNull) targetValue= null;
 
-                    var typeProperty = targetProperty.GetValue(target, null).GetType();
+                    if (targetValue is DBNull) 
+                        targetValue = null;
+                    if (targetProperty.GetValue(target, null) is Int32)
+                        targetValue = System.Convert.ToInt32(targetValue);
+                    if (targetProperty.GetValue(target, null) is String)
+                        targetValue = System.Convert.ToString(targetValue);
+                    if (targetProperty.GetValue(target, null) is DateTime)
+                        targetValue = System.Convert.ToDateTime(targetValue);
+                    if (targetProperty.GetValue(target, null) is Boolean)
+                        targetValue = System.Convert.ToBoolean(targetValue);
+                    if (targetProperty.GetValue(target, null) is String)
+                        targetValue = System.Convert.ToString(targetValue);
+                    if (targetProperty.GetValue(target, null) is Decimal)
+                        targetValue = System.Convert.ToDecimal(targetValue);
+                    if (targetProperty.GetValue(target, null) is Double)
+                        targetValue = System.Convert.ToDouble(targetValue);
+                    if (targetProperty.GetValue(target, null) is SByte)
+                        targetValue = System.Convert.ToSByte(targetValue);
                     
-                    targetProperty.SetValue(target, Convert<Int32>(targetValue), null);
-                    //targetProperty.SetValue(target, targetValue, null);
+                    targetProperty.SetValue(target, targetValue, null);
                 }
                 catch (Exception ex)
                 {
                     Log.Error(ex.Message);
+                    throw new Exception(ex.Message);
                 }
             }
             

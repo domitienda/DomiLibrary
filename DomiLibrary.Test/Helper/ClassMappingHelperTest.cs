@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using DomiLibrary.Helper;
 using DomiLibrary.Test.Helper.EntityTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -73,11 +74,46 @@ namespace DomiLibrary.Test.Helper
             dr[1] = "MiPropiedad";
             table.Rows.Add(dr);
             ds.Tables.Add(table);
-
+            
             var b = ClassMappingHelper.Convert<B>(dr);
 
             Assert.AreEqual("MiPropiedad", b.Property2);
             Assert.AreEqual(5, b.Property3);
+        }
+
+        [TestMethod]
+        public void ConvertTest6()
+        {
+            var ds = new DataSet("ds");
+            var table = new DataTable("MiTabla");
+            table.Columns.Add("Property3");
+            table.Columns.Add("Property2");
+            var dr = table.NewRow();
+            dr.ItemArray = new object[2];
+            dr[0] = 5;
+            dr[1] = "MiPropiedad5";
+            table.Rows.Add(dr);
+            dr = table.NewRow();
+            dr.ItemArray = new object[2];
+            dr[0] = 1;
+            dr[1] = "MiPropiedad1";
+            table.Rows.Add(dr);
+            dr = table.NewRow();
+            dr.ItemArray = new object[2];
+            dr[0] = 2;
+            dr[1] = "MiPropiedad2";
+            table.Rows.Add(dr);
+            ds.Tables.Add(table);
+
+            var list = ClassMappingHelper.Convert<B>(table);
+
+            Assert.AreEqual(3, ((IList<B>)list).Count);
+            Assert.AreEqual("MiPropiedad5", ((IList<B>)list)[0].Property2);
+            Assert.AreEqual("MiPropiedad1", ((IList<B>)list)[1].Property2);
+            Assert.AreEqual("MiPropiedad2", ((IList<B>)list)[2].Property2);
+            Assert.AreEqual(5, ((IList<B>)list)[0].Property3);
+            Assert.AreEqual(1, ((IList<B>)list)[1].Property3);
+            Assert.AreEqual(2, ((IList<B>)list)[2].Property3);
         }
     }
 }
