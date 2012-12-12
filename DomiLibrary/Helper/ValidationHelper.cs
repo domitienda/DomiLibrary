@@ -12,6 +12,15 @@ namespace DomiLibrary.Helper
         /// <summary>
         /// Comprueba si el objeto es nulo y si es devuelve un ArgumentException
         /// </summary>
+        /// <param name="entity"></param>        
+        public static void NotNull(object entity)
+        {
+            NotNull(entity, string.Empty);
+        }
+
+        /// <summary>
+        /// Comprueba si el objeto es nulo y si es devuelve un ArgumentException
+        /// </summary>
         /// <param name="entity"></param>
         /// <param name="message"> </param>
         public static void NotNull(object entity, string message)
@@ -40,6 +49,15 @@ namespace DomiLibrary.Helper
         }
 
         /// <summary>
+        /// Comprueba que el objeto no sea nulo o vacio, si es asi, devuelve ArgumentException
+        /// </summary>
+        /// <param name="entity"></param>
+        public static void NotBlank(string entity)
+        {
+            NotBlank(entity, string.Empty);
+        }
+
+        /// <summary>
         /// Comprueba si la coleccion es nula o tiene 0 elementos
         /// </summary>
         /// <param name="collection"></param>
@@ -54,6 +72,15 @@ namespace DomiLibrary.Helper
             {
                 throw new ArgumentException(MemberHelper.GetNameParameter(() => collection), message);
             }
+        }
+
+        /// <summary>
+        /// Comprueba si la coleccion es nula o tiene 0 elementos
+        /// </summary>
+        /// <param name="collection"></param>
+        public static void NotEmpty(ICollection collection)
+        {
+            NotEmpty(collection, string.Empty);
         }
 
         /// <summary>
@@ -77,6 +104,15 @@ namespace DomiLibrary.Helper
         /// Comprueba si la coleccion es nula o tiene 0 elementos
         /// </summary>
         /// <param name="collection"></param>
+        public static void NotEmpty<T>(T[] collection)
+        {
+            NotEmpty(collection, string.Empty);
+        }
+
+        /// <summary>
+        /// Comprueba si la coleccion es nula o tiene 0 elementos
+        /// </summary>
+        /// <param name="collection"></param>
         /// <param name="message"></param>
         public static void NotEmpty<T>(ICollection<T> collection, string message)
         {
@@ -91,6 +127,15 @@ namespace DomiLibrary.Helper
         }
 
         /// <summary>
+        /// Comprueba si la coleccion es nula o tiene 0 elementos
+        /// </summary>
+        /// <param name="collection"></param>
+        public static void NotEmpty<T>(ICollection<T> collection)
+        {
+            NotEmpty(collection, string.Empty);
+        }
+
+        /// <summary>
         /// Comprueba que la condicion del argumento es true
         /// </summary>
         /// <param name="input"></param>
@@ -101,6 +146,15 @@ namespace DomiLibrary.Helper
             {
                 throw new ArgumentException(MemberHelper.GetNameParameter(() => input), message);
             }
+        }
+
+        /// <summary>
+        /// Comprueba que la condicion del argumento es true
+        /// </summary>
+        /// <param name="input"></param>
+        public static void IsTrue(bool input)
+        {
+            IsTrue(input, string.Empty);
         }
 
         /// <summary>
@@ -125,6 +179,15 @@ namespace DomiLibrary.Helper
         /// Comprueba si algun elemento de la coleccion es nulo
         /// </summary>
         /// <param name="collection"></param>
+        public static void NotNullElements(ICollection collection)
+        {
+            NotNullElements(collection, string.Empty);
+        }
+
+        /// <summary>
+        /// Comprueba si algun elemento de la coleccion es nulo
+        /// </summary>
+        /// <param name="collection"></param>
         /// <param name="message"></param>
         public static void NotNullElements<T>(ICollection<T> collection, string message)
         {
@@ -143,6 +206,15 @@ namespace DomiLibrary.Helper
         /// Comprueba si algun elemento de la coleccion es nulo
         /// </summary>
         /// <param name="collection"></param>
+        public static void NotNullElements<T>(ICollection<T> collection)
+        {
+            NotNullElements(collection, string.Empty);
+        }
+
+        /// <summary>
+        /// Comprueba si algun elemento de la coleccion es nulo
+        /// </summary>
+        /// <param name="collection"></param>
         /// <param name="message"></param>
         public static void NotNullElements<T>(T[] collection, string message)
         {
@@ -155,6 +227,15 @@ namespace DomiLibrary.Helper
                     throw new ArgumentException(MemberHelper.GetNameParameter(() => item), message);
                 }
             }
+        }
+
+        /// <summary>
+        /// Comprueba si algun elemento de la coleccion es nulo
+        /// </summary>
+        /// <param name="collection"></param>
+        public static void NotNullElements<T>(T[] collection)
+        {
+            NotNullElements(collection, string.Empty);
         }
     }
 }

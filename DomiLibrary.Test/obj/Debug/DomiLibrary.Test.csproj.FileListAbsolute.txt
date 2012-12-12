@@ -12,3 +12,4 @@ C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Twitterize
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Iesi.Collections.xml
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.dll
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.pdb
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Test.dll.config
