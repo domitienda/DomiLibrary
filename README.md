@@ -10,7 +10,7 @@ usarlas en cualquier aplicación de negocio.
 
 DomiLibrary.Utility
 ===================
-Contiene clases que actuan como helpers con implementaciones para string, collections, etc.
+Contiene clases que actuan como helpers con implementaciones para string, collections, validaciones, etc.
 
 ------------------
 Más INFO: http://net.domitienda.com podréis encontrar tutoriales con explicaciones de cómo utilizar las clases que contiene 
