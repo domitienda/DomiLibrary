@@ -1,11 +1,11 @@
-C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Test.dll.config
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Test.dll
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Test.pdb
-C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Twitterizer2.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Utility.dll
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Common.Logging.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Twitterizer2.dll
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Utility.pdb
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Twitterizer2.xml
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.csprojResolveAssemblyReference.cache
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.dll
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.pdb
-C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Test.dll.config
-C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Utility.dll
-C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Utility.pdb
