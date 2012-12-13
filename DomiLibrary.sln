@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomiLibrary.Architecture", "DomiLibrary\DomiLibrary.Architecture.csproj", "{53C51117-475D-4319-BD67-EA915399C7E9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomiLibrary.Test", "DomiLibrary.Test\DomiLibrary.Test.csproj", "{7E2649BB-E772-4689-85D7-57E195562F57}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F2E1A9AE-65D7-4B4F-B3E6-5509DA0C4AF4}"
@@ -13,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomiLibrary.Utility", "DomiLibrary.Helper\DomiLibrary.Utility.csproj", "{8E7EF5FF-59EC-4DB9-BB3E-7FE6AC6EB12B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomiLibrary.Architecture", "DomiLibrary.Architecture\DomiLibrary.Architecture.csproj", "{53C51117-475D-4319-BD67-EA915399C7E9}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -27,16 +27,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|x86.ActiveCfg = Release|Any CPU
 		{7E2649BB-E772-4689-85D7-57E195562F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E2649BB-E772-4689-85D7-57E195562F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E2649BB-E772-4689-85D7-57E195562F57}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -57,6 +47,16 @@ Global
 		{8E7EF5FF-59EC-4DB9-BB3E-7FE6AC6EB12B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8E7EF5FF-59EC-4DB9-BB3E-7FE6AC6EB12B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8E7EF5FF-59EC-4DB9-BB3E-7FE6AC6EB12B}.Release|x86.ActiveCfg = Release|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{53C51117-475D-4319-BD67-EA915399C7E9}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
