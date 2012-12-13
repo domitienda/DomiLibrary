@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
-using DomiLibrary.Helper;
+using DomiLibrary.Utility.Helper;
 using DomiLibrary.Test.Helper.EntityTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

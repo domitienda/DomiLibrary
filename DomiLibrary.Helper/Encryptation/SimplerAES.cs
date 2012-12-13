@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Web;
 using System.IO;
 
-namespace DomiLibrary.Encryptation
+namespace DomiLibrary.Utility.Encryptation
 {
     public class SimplerAes
     {

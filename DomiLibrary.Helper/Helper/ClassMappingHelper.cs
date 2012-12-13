@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using Common.Logging;
 
-namespace DomiLibrary.Helper
+namespace DomiLibrary.Utility.Helper
 {
     /// <summary>
     /// Clase encargada de proporcionar metodos/funciones de mapeo de clases

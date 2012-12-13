@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace DomiLibrary.Helper
+namespace DomiLibrary.Utility.Helper
 {
     /// <summary>
     /// Clase encargada de proporcionar utilidades para los atributos de las funciones/metodos/entidades

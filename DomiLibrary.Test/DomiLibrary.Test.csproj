@@ -58,9 +58,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DomiLibrary\DomiLibrary.csproj">
+    <ProjectReference Include="..\DomiLibrary.Helper\DomiLibrary.Utility.csproj">
+      <Project>{8E7EF5FF-59EC-4DB9-BB3E-7FE6AC6EB12B}</Project>
+      <Name>DomiLibrary.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomiLibrary\DomiLibrary.Architecture.csproj">
       <Project>{53C51117-475D-4319-BD67-EA915399C7E9}</Project>
-      <Name>DomiLibrary</Name>
+      <Name>DomiLibrary.Architecture</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

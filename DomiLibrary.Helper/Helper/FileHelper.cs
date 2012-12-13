@@ -4,7 +4,7 @@ using System.Linq;
 using System.IO;
 using System.IO.Compression;
 
-namespace DomiLibrary.Helper
+namespace DomiLibrary.Utility.Helper
 {
     /// <summary>
     /// Clase encargada de proporcionar utilidades para los ficheros

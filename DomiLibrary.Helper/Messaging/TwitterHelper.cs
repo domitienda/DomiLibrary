@@ -1,6 +1,6 @@
 ﻿using Twitterizer;
 
-namespace DomiLibrary.Messaging
+namespace DomiLibrary.Utility.Messaging
 {
     /// <summary>
     /// Clase encargada de realizar la conexion con twitter

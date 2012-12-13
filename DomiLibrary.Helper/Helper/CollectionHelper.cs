@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace DomiLibrary.Helper
+namespace DomiLibrary.Utility.Helper
 {
     /// <summary>
     /// Clase encargada de proporcionar utilidades para las colecciones

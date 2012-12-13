@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DomiLibrary.Helper;
+using DomiLibrary.Utility.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DomiLibrary.Test.Helper

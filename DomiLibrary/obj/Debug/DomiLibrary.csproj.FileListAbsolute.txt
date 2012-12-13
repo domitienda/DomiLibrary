@@ -23,6 +23,6 @@ C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary\bin\Debug\Spring.Data.xml
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary\bin\Debug\Spring.Data.NHibernate32.pdb
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary\bin\Debug\Spring.Data.NHibernate32.xml
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary\bin\Debug\Twitterizer2.xml
-C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary\obj\Debug\DomiLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary\obj\Debug\DomiLibrary.dll
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary\obj\Debug\DomiLibrary.pdb
+C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary\obj\Debug\DomiLibrary.csprojResolveAssemblyReference.cache

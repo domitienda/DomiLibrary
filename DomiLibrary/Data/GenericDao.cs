@@ -10,7 +10,7 @@ namespace DomiLibrary.Data
     public class GenericDao<TDomain, TK> : GenericReadDao<TDomain, TK>, IGenericDao<TDomain, TK>
         where TDomain : class, IEntity<TK>
     {
-        #region IGenericDao<TDomain> Members                
+        #region IGenericDao<TDomain> Members
 
         public virtual TDomain SaveOrUpdate(TDomain obj)
         {

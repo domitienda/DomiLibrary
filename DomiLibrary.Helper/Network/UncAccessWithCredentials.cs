@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace DomiLibrary.Network
+namespace DomiLibrary.Utility.Network
 {
     public class UncAccessWithCredentials : IDisposable
     {

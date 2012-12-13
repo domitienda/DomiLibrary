@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 
-namespace DomiLibrary.Helper
+namespace DomiLibrary.Utility.Helper
 {
     /// <summary>
     /// Clase encargada de ofrecer metodos para string
