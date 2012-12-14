@@ -13,7 +13,7 @@ DomiLibrary.Utility
 Contiene clases que actuan como helpers con implementaciones para string, collections, validaciones, etc.
 
 ------------------
-Más INFO: http://net.domitienda.com podréis encontrar tutoriales con explicaciones de cómo utilizar las clases que contiene 
+Más INFO: http://dotnet.domitienda.com podréis encontrar tutoriales con explicaciones de cómo utilizar las clases que contiene 
 o cómo montar una arquitectura de una forma sencilla usando como librerías de apoyo Spring.NET y NHibernate.
 
 ------------------
