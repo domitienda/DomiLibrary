@@ -145,7 +145,8 @@ namespace DomiLibrary.Utility.Helper
             {
                 try
                 {
-                    var targetProperty = targetType.GetProperty(((DataColumn)column).ColumnName);
+                    var targetPropertyPascal = StringHelper.ToPascalCase(((DataColumn) column).ColumnName);
+                    var targetProperty = targetType.GetProperty(targetPropertyPascal);
                     if(targetProperty == null) continue;
 
                     var targetValue = dr[((DataColumn) column).ColumnName];
