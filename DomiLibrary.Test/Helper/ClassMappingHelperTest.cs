@@ -40,7 +40,7 @@ namespace DomiLibrary.Test.Helper
             table.Rows.Add(dr);
             ds.Tables.Add(table);
 
-            var c = ClassMappingHelper.Convert<C>(dr);
+            var c = ClassMappingHelper.Convert<C>(dr, true);
 
             Assert.AreEqual("MiPropiedad", c.Property4);
         }
@@ -56,7 +56,7 @@ namespace DomiLibrary.Test.Helper
             table.Rows.Add(dr);
             ds.Tables.Add(table);
 
-            var c = ClassMappingHelper.Convert<C>(dr);
+            var c = ClassMappingHelper.Convert<C>(dr, true);
 
             Assert.AreEqual(null, c.Property4);
         }
@@ -75,7 +75,7 @@ namespace DomiLibrary.Test.Helper
             table.Rows.Add(dr);
             ds.Tables.Add(table);
             
-            var b = ClassMappingHelper.Convert<B>(dr);
+            var b = ClassMappingHelper.Convert<B>(dr, true);
 
             Assert.AreEqual("MiPropiedad", b.Property2);
             Assert.AreEqual(5, b.Property3);
@@ -105,7 +105,7 @@ namespace DomiLibrary.Test.Helper
             table.Rows.Add(dr);
             ds.Tables.Add(table);
 
-            var list = ClassMappingHelper.Convert<B>(table);
+            var list = ClassMappingHelper.Convert<B>(table, true);
 
             Assert.AreEqual(3, ((IList<B>)list).Count);
             Assert.AreEqual("MiPropiedad5", ((IList<B>)list)[0].Property2);

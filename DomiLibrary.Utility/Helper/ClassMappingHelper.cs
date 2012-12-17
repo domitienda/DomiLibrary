@@ -62,11 +62,12 @@ namespace DomiLibrary.Utility.Helper
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="dr"></param>
+        /// <param name="toPascal"> </param>
         /// <returns></returns>
-        public static T Convert<T>(DataRow dr)
+        public static T Convert<T>(DataRow dr, bool toPascal)
         {
             var target = Activator.CreateInstance<T>();
-            return FillProperties(dr, target);
+            return FillProperties(dr, target, toPascal);
         }
 
         /// <summary>
@@ -74,10 +75,11 @@ namespace DomiLibrary.Utility.Helper
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="dt"></param>
+        /// <param name="toPascal"> </param>
         /// <returns></returns>
-        public static IEnumerable<T> Convert<T>(DataTable dt)
+        public static IEnumerable<T> Convert<T>(DataTable dt, bool toPascal)
         {
-            return FillProperties<T>(dt);
+            return FillProperties<T>(dt, toPascal);
         }
 
         /// <summary>
@@ -110,8 +112,9 @@ namespace DomiLibrary.Utility.Helper
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="dt"></param>
+        /// <param name="toPascal"> </param>
         /// <returns></returns>
-        private static IEnumerable<T> FillProperties<T>(DataTable dt)
+        private static IEnumerable<T> FillProperties<T>(DataTable dt, bool toPascal)
         {
             if (dt == null)
                 return null;
@@ -120,7 +123,7 @@ namespace DomiLibrary.Utility.Helper
             foreach (var row in dt.Rows)
             {
                 var target = Activator.CreateInstance<T>();
-                var entity = FillProperties((DataRow)row, target);
+                var entity = FillProperties((DataRow)row, target, toPascal);
                 list.Add(entity);
             }
 
@@ -133,8 +136,9 @@ namespace DomiLibrary.Utility.Helper
         /// <typeparam name="T"></typeparam>
         /// <param name="dr"></param>
         /// <param name="target"></param>
+        /// <param name="toPascal"> </param>
         /// <returns></returns>
-        private static T FillProperties<T>(DataRow dr, T target)
+        private static T FillProperties<T>(DataRow dr, T target, bool toPascal)
         {
             if (dr == null)
                 return default(T);
@@ -145,7 +149,12 @@ namespace DomiLibrary.Utility.Helper
             {
                 try
                 {
-                    var targetPropertyPascal = StringHelper.ToPascalCase(((DataColumn) column).ColumnName);
+                    var targetPropertyPascal = ((DataColumn) column).ColumnName;
+                    if (toPascal)
+                    {
+                        targetPropertyPascal = StringHelper.ToPascalCase(((DataColumn) column).ColumnName);
+                    }
+
                     var targetProperty = targetType.GetProperty(targetPropertyPascal);
                     if(targetProperty == null) continue;
 
