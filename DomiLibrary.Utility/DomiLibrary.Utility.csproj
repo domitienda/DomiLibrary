@@ -51,6 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aop\Attributes\Exception\ExceptionAttribute.cs" />
+    <Compile Include="Aop\Attributes\Exception\ExceptionHandler.cs" />
+    <Compile Include="Aop\Attributes\Interceptors\InterceptableAttribute.cs" />
+    <Compile Include="Aop\Attributes\Interceptors\InterceptableObject.cs" />
+    <Compile Include="Aop\Attributes\Interceptors\InterceptContextAttribute.cs" />
+    <Compile Include="Aop\Attributes\Interceptors\InterceptProperty.cs" />
+    <Compile Include="Aop\Attributes\Interceptors\InterceptSink.cs" />
+    <Compile Include="Aop\Attributes\Interceptors\IHandler.cs" />
     <Compile Include="Encryptation\SimplerAES.cs" />
     <Compile Include="GenericException\BusinessException.cs" />
     <Compile Include="Helper\ClassMappingHelper.cs" />
