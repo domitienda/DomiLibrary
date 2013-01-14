@@ -8,6 +8,8 @@ namespace DomiLibrary.Utility.Network
     {
         /// <summary>
         /// Gets the whois information.
+        /// http://dotnet-snippets.com/dns/gets-the-whois-information-SID581.aspx
+        /// Author: Jan Welker 
         /// </summary>
         /// <param name="whoisServer">The whois server.</param>
         /// <param name="url">The URL.</param>

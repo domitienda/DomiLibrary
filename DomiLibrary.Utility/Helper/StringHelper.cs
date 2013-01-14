@@ -172,12 +172,20 @@ namespace DomiLibrary.Utility.Helper
         /// <param name="str">String que se realiza la busqueda</param>
         /// <param name="search">Cadena de busqueda</param>
         /// <param name="strEnd">Cadena en que corta el resultado</param>
+        /// <param name="ignoreCase"> </param>
         /// <returns></returns>
-        public static IList<string> SearchString(string str, string search, string strEnd)
+        public static IList<string> SearchString(string str, string search, string strEnd, bool ignoreCase)
         {
             ValidationHelper.NotBlank(str);
             ValidationHelper.NotBlank(search);
             ValidationHelper.NotBlank(strEnd);
+
+            if(ignoreCase)
+            {
+                str = str.ToLower();
+                search = search.ToLower();
+                strEnd = strEnd.ToLower();
+            }
 
             var result = new List<string>();
             var contains = str.Contains(search);

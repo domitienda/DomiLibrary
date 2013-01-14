@@ -11,7 +11,7 @@ namespace DomiLibrary.Test.Network
         public void WhoisInformationTest()
         {
             var result = Tools.GetWhoisInformation("whois.internic.net", "recompralo.com");
-            var dns = StringHelper.SearchString(result, "Name Server: ", "\r\n");
+            var dns = StringHelper.SearchString(result, "Name Server: ", "\r\n", true);
             Assert.AreEqual(2, dns.Count);
         }
     }
