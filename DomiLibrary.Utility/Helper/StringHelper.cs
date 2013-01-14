@@ -164,5 +164,35 @@ namespace DomiLibrary.Utility.Helper
             
             return input;
         }
+
+        /// <summary>
+        /// Funcion que busca una cadena dentro de un string
+        /// Debemos indicarle que corte el string hasta que encuentra el string de fin
+        /// </summary>
+        /// <param name="str">String que se realiza la busqueda</param>
+        /// <param name="search">Cadena de busqueda</param>
+        /// <param name="strEnd">Cadena en que corta el resultado</param>
+        /// <returns></returns>
+        public static IList<string> SearchString(string str, string search, string strEnd)
+        {
+            ValidationHelper.NotBlank(str);
+            ValidationHelper.NotBlank(search);
+            ValidationHelper.NotBlank(strEnd);
+
+            var result = new List<string>();
+            var contains = str.Contains(search);
+            if (!contains) return result;
+            
+            while (str.Contains(search))
+            {
+                var ini = str.IndexOf(search, System.StringComparison.Ordinal);
+                var aux = str.Substring(ini);
+                var fin = aux.IndexOf(strEnd, System.StringComparison.Ordinal);
+                result.Add(aux.Substring(0, fin));
+                str = aux.Substring(fin);
+            }
+
+            return result;
+        }
     }
 }

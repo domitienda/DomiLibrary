@@ -56,6 +56,7 @@
     <Compile Include="Helper\StringHelperTest.cs" />
     <Compile Include="Helper\ValidationHelperTest.cs" />
     <Compile Include="Helper\WmiHelperTest.cs" />
+    <Compile Include="Network\ToolsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
