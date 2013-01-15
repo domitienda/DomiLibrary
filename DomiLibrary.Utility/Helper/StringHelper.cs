@@ -168,13 +168,14 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Funcion que busca una cadena dentro de un string
         /// Debemos indicarle que corte el string hasta que encuentra el string de fin
+        /// Ejemplo: paramatro1 valor1;, search:parametro1, strEnd:; return valor1
         /// </summary>
         /// <param name="str">String que se realiza la busqueda</param>
         /// <param name="search">Cadena de busqueda</param>
         /// <param name="strEnd">Cadena en que corta el resultado</param>
         /// <param name="ignoreCase"> </param>
         /// <returns></returns>
-        public static IList<string> SearchString(string str, string search, string strEnd, bool ignoreCase)
+        public static IList<string> SearchStringGetValue(string str, string search, string strEnd, bool ignoreCase)
         {
             ValidationHelper.NotBlank(str);
             ValidationHelper.NotBlank(search);
@@ -194,6 +195,7 @@ namespace DomiLibrary.Utility.Helper
             while (str.Contains(search))
             {
                 var ini = str.IndexOf(search, System.StringComparison.Ordinal);
+                ini = ini + search.Length;
                 var aux = str.Substring(ini);
                 var fin = aux.IndexOf(strEnd, System.StringComparison.Ordinal);
                 result.Add(aux.Substring(0, fin));

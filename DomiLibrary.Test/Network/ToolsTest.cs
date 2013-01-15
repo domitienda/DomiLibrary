@@ -1,5 +1,4 @@
-﻿using DomiLibrary.Utility.Helper;
-using DomiLibrary.Utility.Network;
+﻿using DomiLibrary.Utility.Network;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DomiLibrary.Test.Network
@@ -8,11 +7,59 @@ namespace DomiLibrary.Test.Network
     public class ToolsTest
     {
         [TestMethod]
-        public void WhoisInformationTest()
+        public void GetDomainNameTest()
+        {            
+            var result = WhoisServerHelper.GetDomainName("whois.internic.net", "recompralo.com");
+            Assert.AreEqual("RECOMPRALO.COM", result.ToUpper());
+        }
+
+        [TestMethod]
+        public void GetWhoisServerTest()
         {
-            var result = Tools.GetWhoisInformation("whois.internic.net", "recompralo.com");
-            var dns = StringHelper.SearchString(result, "Name Server: ", "\r\n", true);
-            Assert.AreEqual(2, dns.Count);
+            var result = WhoisServerHelper.GetWhoisServer("whois.internic.net", "recompralo.com");
+            Assert.AreEqual("whois2.virtualname.es", result);
+        }
+
+        [TestMethod]
+        public void GetReferralUrlTest()
+        {
+            var result = WhoisServerHelper.GetReferralUrl("whois.internic.net", "recompralo.com");
+            Assert.AreEqual("http://www.virtualname.es", result);
+        }
+
+        [TestMethod]
+        public void GetNameServerTest()
+        {
+            var result = WhoisServerHelper.GetNameServer("whois.verisign-grs.com", "recompralo.com");
+            Assert.AreEqual(2, result.Count);
+        }
+
+        [TestMethod]
+        public void GetStatusTest()
+        {
+            var result = WhoisServerHelper.GetStatus("whois.internic.net", "recompralo.com");
+            Assert.AreEqual("clienttransferprohibited", result);
+        }
+
+        [TestMethod]
+        public void GetUpdateDateTest()
+        {
+            var result = WhoisServerHelper.GetUpdateDate("whois.internic.net", "recompralo.com");
+            Assert.AreEqual("17-sep-2012", result);
+        }
+
+        [TestMethod]
+        public void GetCreationDateTest()
+        {
+            var result = WhoisServerHelper.GetCreationDate("whois.internic.net", "recompralo.com");
+            Assert.AreEqual("30-nov-2011", result);
+        }
+
+        [TestMethod]
+        public void GetExpirationDateTest()
+        {
+            var result = WhoisServerHelper.GetExpirationDate("whois.internic.net", "recompralo.com");
+            Assert.AreEqual("30-nov-2013", result);
         }
     }
 }
