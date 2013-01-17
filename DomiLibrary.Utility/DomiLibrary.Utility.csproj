@@ -73,6 +73,7 @@
     <Compile Include="Network\WhoisServerHelper.cs" />
     <Compile Include="Network\UncAccessWithCredentials.cs" />
     <Compile Include="Network\WhoisServerEnum.cs" />
+    <Compile Include="Network\WhoisServerProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

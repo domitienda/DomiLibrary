@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
 using System.Text;
@@ -34,10 +35,38 @@ namespace DomiLibrary.Utility.Network
 
             var streamReaderReceive = new StreamReader(bufferedStreamWhois);
 
-            while (!streamReaderReceive.EndOfStream)
-                stringBuilderResult.AppendLine(streamReaderReceive.ReadLine());
+            try
+            {
+                while (!streamReaderReceive.EndOfStream)
+                    stringBuilderResult.AppendLine(streamReaderReceive.ReadLine());
 
-            return stringBuilderResult.ToString();
+                return stringBuilderResult.ToString();
+            }
+            catch (Exception ex) 
+            {
+                return string.Empty;
+            }
+        }
+
+        /// <summary>
+        /// Funcion que devuelve la informacion whois al completo, con los datos de contacto
+        /// </summary>
+        /// <param name="whoisServer"></param>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string GetWhoisInformationComplete(string whoisServer, string url)
+        {
+            ValidationHelper.NotBlank(whoisServer);
+            ValidationHelper.NotBlank(url);
+
+            var whois = GetWhoisInformation(whoisServer, url);
+            var whoisServerName = GetWhoisServer(whoisServer, url);
+            if(whoisServerName != null && !whoisServerName.Equals(string.Empty))
+            {
+                whois += GetWhoisInformation(whoisServerName, url);
+            }
+
+            return whois;
         }
 
         /// <summary>
@@ -55,6 +84,9 @@ namespace DomiLibrary.Utility.Network
             ValidationHelper.NotBlank(property);
 
             var whois = GetWhoisInformation(whoisServer, url);
+            if(whois == null || whois.Equals(string.Empty))
+                return new List<string>();
+
             var nameServers = StringHelper.SearchStringGetValue(whois, property, separator, true);
 
             return nameServers;

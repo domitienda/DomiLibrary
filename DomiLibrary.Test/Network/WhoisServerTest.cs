@@ -4,12 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DomiLibrary.Test.Network
 {
     [TestClass]
-    public class ToolsTest
+    public class WhoisServerTest
     {
         [TestMethod]
         public void GetDomainNameTest()
-        {            
-            var result = WhoisServerHelper.GetDomainName("whois.internic.net", "recompralo.com");
+        {
+            var result = WhoisServerHelper.GetDomainName("whois.nic.es", "recompralo.es");
             Assert.AreEqual("RECOMPRALO.COM", result.ToUpper());
         }
 
@@ -60,6 +60,16 @@ namespace DomiLibrary.Test.Network
         {
             var result = WhoisServerHelper.GetExpirationDate("whois.internic.net", "recompralo.com");
             Assert.AreEqual("30-nov-2013", result);
+        }
+
+        [TestMethod]
+        public void GetInformationServerComplete()
+        {
+            var url = "domitienda.com";
+            var whoisServer = WhoisServerProxy.Proxy("com");
+            var result = WhoisServerHelper.GetWhoisInformationComplete(whoisServer, url);
+            Assert.IsNotNull(result);
+            Assert.AreNotEqual(string.Empty, result);
         }
     }
 }
