@@ -2,4 +2,5 @@
   <Module PersistentId="7E2649BB-E772-4689-85D7-57E195562F57" ModuleId="DomiLibrary.Test" />
   <Module PersistentId="53C51117-475D-4319-BD67-EA915399C7E9" ModuleId="DomiLibrary" />
   <Module PersistentId="8E7EF5FF-59EC-4DB9-BB3E-7FE6AC6EB12B" ModuleId="DomiLibrary.Helper" />
+  <Module PersistentId="7047B060-6DF1-44C6-AE2E-EFD852AA0DA8" ModuleId="DomiLibrary2.Utility" />
 </Modules>

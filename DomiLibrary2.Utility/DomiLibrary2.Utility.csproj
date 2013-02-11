@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8E7EF5FF-59EC-4DB9-BB3E-7FE6AC6EB12B}</ProjectGuid>
+    <ProjectGuid>{7047B060-6DF1-44C6-AE2E-EFD852AA0DA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DomiLibrary.Utility</RootNamespace>
-    <AssemblyName>DomiLibrary.Utility</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>DomiLibrary2.Utility</RootNamespace>
+    <AssemblyName>DomiLibrary2.Utility</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,50 +31,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging, Version=2.1.2.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aop\Attributes\Exception\ExceptionAttribute.cs" />
     <Compile Include="Aop\Attributes\Exception\ExceptionHandler.cs" />
+    <Compile Include="Aop\Attributes\Interceptors\IHandler.cs" />
     <Compile Include="Aop\Attributes\Interceptors\InterceptableAttribute.cs" />
     <Compile Include="Aop\Attributes\Interceptors\InterceptableObject.cs" />
     <Compile Include="Aop\Attributes\Interceptors\InterceptContextAttribute.cs" />
     <Compile Include="Aop\Attributes\Interceptors\InterceptProperty.cs" />
     <Compile Include="Aop\Attributes\Interceptors\InterceptSink.cs" />
-    <Compile Include="Aop\Attributes\Interceptors\IHandler.cs" />
-    <Compile Include="Encryptation\SimplerAES.cs" />
-    <Compile Include="GenericException\BusinessException.cs" />
     <Compile Include="Helper\ClassMappingHelper.cs" />
     <Compile Include="Helper\CollectionHelper.cs" />
-    <Compile Include="Helper\EmailHelper.cs" />
-    <Compile Include="Helper\FileHelper.cs" />
     <Compile Include="Helper\MemberHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Helper\ValidationHelper.cs" />
     <Compile Include="Helper\WmiHelper.cs" />
-    <Compile Include="Network\WhoisServerHelper.cs" />
     <Compile Include="Network\UncAccessWithCredentials.cs" />
     <Compile Include="Network\WhoisServerEnum.cs" />
+    <Compile Include="Network\WhoisServerHelper.cs" />
     <Compile Include="Network\WhoisServerProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Messaging\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
