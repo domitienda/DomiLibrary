@@ -35,6 +35,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -64,6 +67,9 @@
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Helper\ValidationHelper.cs" />
     <Compile Include="Helper\WmiHelper.cs" />
+    <Compile Include="Log\AppenderHelper.cs" />
+    <Compile Include="Log\FileAppenderHelper.cs" />
+    <Compile Include="Log\LogLevelEnum.cs" />
     <Compile Include="Network\WhoisServerHelper.cs" />
     <Compile Include="Network\UncAccessWithCredentials.cs" />
     <Compile Include="Network\WhoisServerEnum.cs" />
