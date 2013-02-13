@@ -47,6 +47,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dns\Bind\ParsearFicheroZonaTest.cs" />
     <Compile Include="Helper\ClassMappingHelperTest.cs" />
     <Compile Include="Helper\CollectionHelperTest.cs" />
     <Compile Include="Helper\EntityTest\A.cs" />

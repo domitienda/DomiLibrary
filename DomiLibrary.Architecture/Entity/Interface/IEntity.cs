@@ -1,4 +1,4 @@
-﻿namespace DomiLibrary.Entity.Interface
+﻿namespace DomiLibrary.Architecture.Entity.Interface
 {
     /// <summary>
     /// Interface que decora las entidades de negocio.

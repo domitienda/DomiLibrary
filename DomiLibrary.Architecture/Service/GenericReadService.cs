@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using DomiLibrary.Entity.Interface;
-using DomiLibrary.Core.Service;
-using DomiLibrary.Core.Dao;
+using DomiLibrary.Architecture.Core.Dao;
+using DomiLibrary.Architecture.Core.Service;
+using DomiLibrary.Architecture.Entity.Interface;
 using NHibernate;
 
-namespace DomiLibrary.Service
+namespace DomiLibrary.Architecture.Service
 {
     public class GenericReadService<TDomain, TK> : IGenericReadService<TDomain, TK> where TDomain : IEntity<TK>
     {

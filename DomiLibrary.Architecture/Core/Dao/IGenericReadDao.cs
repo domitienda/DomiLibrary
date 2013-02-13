@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using DomiLibrary.Entity.Interface;
+using DomiLibrary.Architecture.Entity.Interface;
 using NHibernate;
 
-namespace DomiLibrary.Core.Dao
+namespace DomiLibrary.Architecture.Core.Dao
 {
     public interface IGenericReadDao<TDomain, in TK> : IQueryable<TDomain> where TDomain : IEntity<TK>
     {

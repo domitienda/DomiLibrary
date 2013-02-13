@@ -1,6 +1,6 @@
 ﻿using NHibernate;
 
-namespace DomiLibrary.Core.Service
+namespace DomiLibrary.Architecture.Core.Service
 {
     /// <summary>
     /// Interface que nos ayuda a saber si una clase es un Servicio.

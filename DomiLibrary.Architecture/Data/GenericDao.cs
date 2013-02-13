@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using DomiLibrary.Architecture.Core.Dao;
+using DomiLibrary.Architecture.Entity.Interface;
 using NHibernate.Linq;
-using DomiLibrary.Core.Dao;
-using DomiLibrary.Entity.Interface;
 
-
-namespace DomiLibrary.Data
+namespace DomiLibrary.Architecture.Data
 {
     public class GenericDao<TDomain, TK> : GenericReadDao<TDomain, TK>, IGenericDao<TDomain, TK>
         where TDomain : class, IEntity<TK>

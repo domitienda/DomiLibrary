@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using DomiLibrary.Entity.Interface;
+using DomiLibrary.Architecture.Entity.Interface;
 
-namespace DomiLibrary.Core.Dao
+namespace DomiLibrary.Architecture.Core.Dao
 {
     public interface IGenericDao<TDomain, TK> : IGenericReadDao<TDomain, TK>
         where TDomain : IEntity<TK>

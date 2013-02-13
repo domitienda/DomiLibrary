@@ -57,6 +57,8 @@
     <Compile Include="Aop\Attributes\Interceptors\InterceptProperty.cs" />
     <Compile Include="Aop\Attributes\Interceptors\InterceptSink.cs" />
     <Compile Include="Aop\Attributes\Interceptors\IHandler.cs" />
+    <Compile Include="Dns\Bind\ConstantesDnsBind.cs" />
+    <Compile Include="Dns\Bind\ParsearFicheroZona.cs" />
     <Compile Include="Encryptation\SimplerAES.cs" />
     <Compile Include="GenericException\BusinessException.cs" />
     <Compile Include="Helper\ClassMappingHelper.cs" />

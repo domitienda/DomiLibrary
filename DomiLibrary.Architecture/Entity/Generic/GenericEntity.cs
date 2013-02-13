@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DomiLibrary.Entity.Generic
+namespace DomiLibrary.Architecture.Entity.Generic
 {
     [Serializable]
     public class GenericEntity : GenericBaseEntity<Int32>, IComparable<GenericEntity>

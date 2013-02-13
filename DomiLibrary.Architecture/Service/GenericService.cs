@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using DomiLibrary.Core.Dao;
-using DomiLibrary.Core.Service;
-using DomiLibrary.Entity.Interface;
+using DomiLibrary.Architecture.Core.Dao;
+using DomiLibrary.Architecture.Core.Service;
+using DomiLibrary.Architecture.Entity.Interface;
 
-namespace DomiLibrary.Service
+namespace DomiLibrary.Architecture.Service
 {
     public class GenericService<TDomain, TK> : GenericReadService<TDomain, TK>, IGenericService<TDomain, TK>
         where TDomain : class, IEntity<TK>

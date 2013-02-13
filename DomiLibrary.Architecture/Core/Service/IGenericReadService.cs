@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using DomiLibrary.Entity.Interface;
+using DomiLibrary.Architecture.Entity.Interface;
 
-namespace DomiLibrary.Core.Service
+namespace DomiLibrary.Architecture.Core.Service
 {
     public interface IGenericReadService<TDomain, in TK> : IService where TDomain : IEntity<TK>
     {

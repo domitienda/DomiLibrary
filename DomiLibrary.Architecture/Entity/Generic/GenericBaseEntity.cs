@@ -1,8 +1,8 @@
 ﻿using System;
-using DomiLibrary.Entity.Interface;
 using System.Runtime.Serialization;
+using DomiLibrary.Architecture.Entity.Interface;
 
-namespace DomiLibrary.Entity.Generic
+namespace DomiLibrary.Architecture.Entity.Generic
 {
     [Serializable]
     public class GenericBaseEntity<TKEY> : IEntity<TKEY>, IComparable<GenericBaseEntity<TKEY>>
