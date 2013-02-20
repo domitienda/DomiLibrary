@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 
 namespace DomiLibrary.Utility.Helper
 {
@@ -203,6 +204,21 @@ namespace DomiLibrary.Utility.Helper
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Convierte un string en un stream
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static Stream ConvertToStream(string input)
+        {
+            ValidationHelper.NotBlank(input);
+
+            var byteArray = System.Text.Encoding.ASCII.GetBytes(input);
+            var memoryStream = new MemoryStream(byteArray);
+
+            return memoryStream;
         }
     }
 }
