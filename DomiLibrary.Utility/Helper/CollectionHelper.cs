@@ -60,7 +60,28 @@ namespace DomiLibrary.Utility.Helper
 
             return result;
         }
-        
+
+        /// <summary>
+        /// Devuelve una nueva coleccion que contiene a - b.
+        /// </summary>
+        /// <param name="a">Coleccion desde la que se restará</param>
+        /// <param name="b">Coleccion que restará</param>
+        /// <returns>Nueva coleccion con los resultados</returns>
+        public static ICollection<T> Subtract<T>(ICollection<T> a, ICollection<T> b)
+        {
+            ValidationHelper.NotNull(a, "El paramentro a es nulo");
+            ValidationHelper.NotNull(b, "El paramentro b es nulo");
+
+            var result = new List<T>();
+
+            foreach (var item in b)
+            {
+                result.Remove(item);
+            }
+
+            return result;
+        }
+
         /// <summary>
         /// Devuelve una nueva coleccion que contiene a - b.
         /// </summary>

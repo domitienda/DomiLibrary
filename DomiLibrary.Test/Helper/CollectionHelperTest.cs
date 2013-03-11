@@ -82,7 +82,7 @@ namespace DomiLibrary.Test.Helper
                             new Extension(1, "1")
                         };
 
-            var result = CollectionHelper.Subtract(a, b);
+            var result = CollectionHelper.Subtract((IList<Extension>)a, (IList<Extension>)b);
             Assert.AreEqual(2, result.Count);
         }
     }
