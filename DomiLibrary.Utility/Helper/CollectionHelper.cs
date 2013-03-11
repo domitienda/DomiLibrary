@@ -67,7 +67,7 @@ namespace DomiLibrary.Utility.Helper
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static ICollection Subtract<T>(ICollection<T> a, ICollection<T> b)
+        public static ICollection<T> Subtract<T>(ICollection<T> a, ICollection<T> b)
         {
             ValidationHelper.NotNull(a, "El paramentro a es nulo");
             ValidationHelper.NotNull(b, "El paramentro b es nulo");
@@ -88,7 +88,7 @@ namespace DomiLibrary.Utility.Helper
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static ICollection Subtract<T>(T[] a, T[] b)
+        public static T[] Subtract<T>(T[] a, T[] b)
         {
             ValidationHelper.NotNull(a, "El paramentro a es nulo");
             ValidationHelper.NotNull(b, "El paramentro b es nulo");
@@ -100,7 +100,7 @@ namespace DomiLibrary.Utility.Helper
                 result.Remove(item);
             }
 
-            return result;
+            return result.ToArray();
         }
     }
 }
