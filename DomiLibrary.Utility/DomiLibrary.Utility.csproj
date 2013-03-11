@@ -64,6 +64,7 @@
     <Compile Include="Encoding\PunyCode\PunyCodeException.cs" />
     <Compile Include="Encryptation\SimplerAES.cs" />
     <Compile Include="GenericException\BusinessException.cs" />
+    <Compile Include="Helper\BooleanHelper.cs" />
     <Compile Include="Helper\ClassMappingHelper.cs" />
     <Compile Include="Helper\CollectionHelper.cs" />
     <Compile Include="Helper\EmailHelper.cs" />

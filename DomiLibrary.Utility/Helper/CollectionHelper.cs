@@ -37,5 +37,26 @@ namespace DomiLibrary.Utility.Helper
         {
             return collection == null || collection.Length == 0;
         }
+
+        /// <summary>
+        /// Devuelve una nueva coleccion que contiene a - b.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public static ICollection Subtract(ICollection a, ICollection b)
+        {
+            ValidationHelper.NotNull(a, "El paramentro a es nulo");
+            ValidationHelper.NotNull(b, "El paramentro b es nulo");
+
+            var result = new ArrayList(a);
+
+            foreach (var item in b)
+            {
+                result.Remove(item);
+            }
+
+            return result;
+        }
     }
 }
