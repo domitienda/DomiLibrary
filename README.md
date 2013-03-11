@@ -12,6 +12,8 @@ DomiLibrary.Utility
 ===================
 Contiene clases que actuan como helpers con implementaciones para string, collections, validaciones, etc.
 
+Documentación: http://dotnet.domitienda.com/DomiLibraryDoc/html/index.html
+
 DomiLibrary2.Utility
 ===================
 Contiene clases que actuan como helpers con implementaciones para string, collections, validaciones, etc. para el framework
