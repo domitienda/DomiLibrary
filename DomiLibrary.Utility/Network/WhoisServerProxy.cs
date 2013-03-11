@@ -1,7 +1,15 @@
 ﻿namespace DomiLibrary.Utility.Network
 {
+    /// <summary>
+    /// Proxy WhoisServer
+    /// </summary>
     public class WhoisServerProxy
     {
+        /// <summary>
+        /// Devuelve el server whois asociado a la extension
+        /// </summary>
+        /// <param name="extension">Extension</param>
+        /// <returns>Nombre del servidor de whois</returns>
         public static string Proxy(string extension)
         {
             string result;

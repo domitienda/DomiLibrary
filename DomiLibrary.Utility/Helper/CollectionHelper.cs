@@ -13,8 +13,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Comprueba si la coleccion es nula o vacia
         /// </summary>
-        /// <param name="collection"></param>
-        /// <returns></returns>
+        /// <param name="collection">Parametro de entrada</param>
+        /// <returns>Si esta vacia o nula</returns>
         public static bool IsEmpty(ICollection collection)
         {
             return collection == null || collection.Count == 0;
@@ -23,8 +23,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Comprueba si la coleccion es nula o vacia
         /// </summary>
-        /// <param name="collection"></param>
-        /// <returns></returns>
+        /// <param name="collection">Parametro de entrada</param>
+        /// <returns>Si esta vacia o nula</returns>
         public static bool IsEmpty<T>(ICollection<T> collection)
         {
             return collection == null || collection.Count == 0;
@@ -33,8 +33,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Comprueba si la coleccion es nula o vacia
         /// </summary>
-        /// <param name="collection"></param>
-        /// <returns></returns>
+        /// <param name="collection">Parametro de entrada</param>
+        /// <returns>Si esta vacia o nula</returns>
         public static bool IsEmpty<T>(T[] collection)
         {
             return collection == null || collection.Length == 0;
@@ -43,9 +43,9 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Devuelve una nueva coleccion que contiene a - b.
         /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
+        /// <param name="a">Coleccion desde la que se restará</param>
+        /// <param name="b">Coleccion que restará</param>
+        /// <returns>Nueva coleccion con los resultados</returns>
         public static ICollection Subtract(ICollection a, ICollection b)
         {
             ValidationHelper.NotNull(a, "El paramentro a es nulo");
@@ -64,9 +64,9 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Devuelve una nueva coleccion que contiene a - b.
         /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
+        /// <param name="a">Coleccion desde la que se restará</param>
+        /// <param name="b">Coleccion que restará</param>
+        /// <returns>Nueva coleccion con los resultados</returns>
         public static ICollection<T> Subtract<T>(ICollection<T> a, ICollection<T> b)
         {
             ValidationHelper.NotNull(a, "El paramentro a es nulo");
@@ -85,9 +85,9 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Devuelve una nueva coleccion que contiene a - b.
         /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
+        /// <param name="a">Coleccion desde la que se restará</param>
+        /// <param name="b">Coleccion que restará</param>
+        /// <returns>Nueva coleccion con los resultados</returns>
         public static T[] Subtract<T>(T[] a, T[] b)
         {
             ValidationHelper.NotNull(a, "El paramentro a es nulo");

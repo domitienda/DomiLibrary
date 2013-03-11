@@ -11,10 +11,10 @@ namespace DomiLibrary.Utility.Log
         /// <summary>
         /// Contiene la logica para crear un appender FICHERO
         /// </summary>
-        /// <param name="nombreAppender"></param>
-        /// <param name="nombreFichero"></param>
+        /// <param name="nombreAppender">Nombre del appender</param>
+        /// <param name="nombreFichero">Nombre del fichero</param>
         /// <param name="patronConversion"> Si se deja a null el valor por defecto es %d [%t] %-5p %c [%x] - %m%n </param>
-        /// <returns></returns>
+        /// <returns>Retorna el appender creado</returns>
         public static IAppender CrearAppenderFichero(string nombreAppender, string nombreFichero, string patronConversion)
         {
             var appender = new FileAppender

@@ -12,8 +12,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Comprueba es vacio o nulo
         /// </summary>
-        /// <param name="entity"></param>
-        /// <returns></returns>
+        /// <param name="entity">parametro de entrada</param>
+        /// <returns>retorna boolean</returns>
         public static bool IsBlank(string entity)
         {
             return entity == null || entity.Equals(string.Empty);
@@ -22,8 +22,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Devuelve un contador con el numero de bytes que tiene un string
         /// </summary>
-        /// <param name="cadena"></param>
-        /// <returns></returns>
+        /// <param name="cadena">parametro de entrada</param>
+        /// <returns>numero de bytes</returns>
         public static int CountStringToBytes(string cadena)
         {
             var resultado = StringToBytes(cadena);
@@ -34,8 +34,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Convierte un string en un array de bytes
         /// </summary>
-        /// <param name="cadena"></param>
-        /// <returns></returns>
+        /// <param name="cadena">parametro de entrada</param>
+        /// <returns>array de bytes</returns>
         public static byte[] StringToBytes(string cadena)
         {
             var codificador = new System.Text.ASCIIEncoding();
@@ -46,10 +46,10 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Formatea un string por la izquierda con el literal y cantidad especificada
         /// </summary>
-        /// <param name="cadena"></param>
-        /// <param name="numPosiciones"></param>
-        /// <param name="caracter"></param>
-        /// <returns></returns>
+        /// <param name="cadena">cadena de entrada</param>
+        /// <param name="numPosiciones">numero de posiciones</param>
+        /// <param name="caracter">string de relleno</param>
+        /// <returns>cadena formateada</returns>
         public static string FormatString(string cadena, int numPosiciones, string caracter)
         {
             var numPosicionesCadena = cadena.Length;
@@ -72,10 +72,10 @@ namespace DomiLibrary.Utility.Helper
         /// Reemplaza en un string el caracter correspondiente al indice pasado por paramatro
         /// por el caracter de reemplazo
         /// </summary>
-        /// <param name="input"></param>
-        /// <param name="replace"></param>
-        /// <param name="index"></param>
-        /// <returns></returns>
+        /// <param name="input">parametro de entrada</param>
+        /// <param name="replace">cadena de reemplazo</param>
+        /// <param name="index">indice</param>
+        /// <returns>cadena con el reemplazo</returns>
         public static string ReplaceByIndex(string input, string replace, int index)
         {
             ValidationHelper.NotBlank(input, string.Empty);
@@ -99,9 +99,9 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Retorna un listado con los indices donde se encuentra el caracter que buscamos
         /// </summary>
-        /// <param name="input"></param>
-        /// <param name="character"></param>
-        /// <returns></returns>
+        /// <param name="input">parametro de entrada</param>
+        /// <param name="character">caracter de busqueda</param>
+        /// <returns>array de posiciones</returns>
         public static int[] GetIndexesByCharacter(string input, char character)
         {
             ValidationHelper.NotBlank(input, string.Empty);
@@ -120,9 +120,9 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Retorna un listado con los indices donde se encuentra el caracter que buscamos
         /// </summary>
-        /// <param name="input"></param>
-        /// <param name="characters"></param>
-        /// <returns></returns>
+        /// <param name="input">parametro de entrada</param>
+        /// <param name="characters">caracteres de busqueda</param>
+        /// <returns>array de indices</returns>
         public static int[] GetIndexesByCharacter(string input, IList<char> characters)
         {
             ValidationHelper.NotBlank(input, string.Empty);
@@ -141,8 +141,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Convierte un string en formato pascal
         /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
+        /// <param name="input">paramatro de entrada</param>
+        /// <returns>cadena convertida</returns>
         public static string ToPascalCase(string input)
         {
             ValidationHelper.NotBlank(input, string.Empty);
@@ -174,8 +174,8 @@ namespace DomiLibrary.Utility.Helper
         /// <param name="str">String que se realiza la busqueda</param>
         /// <param name="search">Cadena de busqueda</param>
         /// <param name="strEnd">Cadena en que corta el resultado</param>
-        /// <param name="ignoreCase"> </param>
-        /// <returns></returns>
+        /// <param name="ignoreCase">ignorar mayusculas/minusculas</param>
+        /// <returns>retorna el listado de coincidencias</returns>
         public static IList<string> SearchStringGetValue(string str, string search, string strEnd, bool ignoreCase)
         {
             ValidationHelper.NotBlank(str);
@@ -209,8 +209,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Convierte un string en un stream
         /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
+        /// <param name="input">parametro de entrada</param>
+        /// <returns>stream de conversion</returns>
         public static Stream ConvertToStream(string input)
         {
             ValidationHelper.NotBlank(input);

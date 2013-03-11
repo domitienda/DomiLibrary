@@ -12,8 +12,8 @@ namespace DomiLibrary.Utility.Log
         /// <summary>
         /// Metodo que establece el nivel en un logger
         /// </summary>
-        /// <param name="nombreLogger"></param>
-        /// <param name="nivel"></param>
+        /// <param name="nombreLogger">Nombre del logger</param>
+        /// <param name="nivel">Nivel</param>
         public static void EstablecerNivel(string nombreLogger, string nivel)
         {
             var log = LogManager.GetLogger(nombreLogger);
@@ -24,8 +24,8 @@ namespace DomiLibrary.Utility.Log
         /// <summary>
         /// Añade un IAppender en un logger
         /// </summary>
-        /// <param name="nombreLogger"></param>
-        /// <param name="appender"></param>
+        /// <param name="nombreLogger">Nombre del logger</param>
+        /// <param name="appender">Objeto del appender</param>
         public static void AnyadirAppender(string nombreLogger, IAppender appender)
         {
             var log = LogManager.GetLogger(nombreLogger);

@@ -11,9 +11,9 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Funcion que devuelve el nombre del parametro de la funcion/metodo
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="expr"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">Tipo</typeparam>
+        /// <param name="expr">Expresion</param>
+        /// <returns>Nombre del parametro</returns>
         public static string GetNameParameter<T>(Expression<Func<T>> expr)
         {
             var body = ((MemberExpression)expr.Body);

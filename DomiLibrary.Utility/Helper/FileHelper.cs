@@ -14,8 +14,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Funcion que devuelve el tamanyo de un directorio
         /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
+        /// <param name="path">Path del directorio que se realizara el calculo</param>
+        /// <returns>Tamaño del directorio</returns>
         public static long GetSizeFolder(string path)
         {
             long folderSize;
@@ -37,8 +37,8 @@ namespace DomiLibrary.Utility.Helper
         /// Función que dada una ruta y un patrón, elimina de un directorio
         /// todos los ficheros que empiezan por dicho patrón.
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="pattern"></param>
+        /// <param name="path">Path del directorio</param>
+        /// <param name="pattern">Patron</param>
         public static void DeleteFilesByStartWith(string path, string pattern)
         {
             try
@@ -64,8 +64,8 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Obtiene el tamaño en MB del fichero
         /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
+        /// <param name="path">Path del fichero</param>
+        /// <returns>Tamaño del fichero</returns>
         public static double GetTamanyoFileMb(string path)
         {
             var archivo = new FileInfo(path);
@@ -80,7 +80,7 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Metodo que comprime un fichero
         /// </summary>
-        /// <param name="fi"></param>
+        /// <param name="fi">Informacion del fichero comprimido</param>
         public static void Compress(FileInfo fi)
         {
             // Get the stream of the source file.
@@ -115,7 +115,7 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Metodo que descomprime un fichero
         /// </summary>
-        /// <param name="fi"></param>
+        /// <param name="fi">Informacion del fichero descomprimido</param>
         public static void Decompress(FileInfo fi)
         {
             // Get the stream of the source file.

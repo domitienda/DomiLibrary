@@ -31,8 +31,8 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// Funcion encargada de devolver las lineas que coinciden con el 
         /// parametro de busqueda dentro del streamreader
         /// </summary>
-        /// <param name="parametro"></param>
-        /// <returns></returns>
+        /// <param name="parametro">Parametro de busqueda</param>
+        /// <returns>Devuelve un listado de lineas que coinciden con los parametros de busqueda</returns>
         private IList<string> BuscarParametro(string parametro)
         {
             ValidationHelper.NotBlank(parametro);
@@ -58,9 +58,9 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// Funcion encargada de devolver las lineas que coinciden con el
         /// parametro y encabezado pasados en la funcion
         /// </summary>
-        /// <param name="parametro"></param>
-        /// <param name="encabezado"></param>
-        /// <returns></returns>
+        /// <param name="parametro">Parametro de busqueda</param>
+        /// <param name="encabezado">Encabezado de busqueda</param>
+        /// <returns>Devuelve un listado de lineas que coinciden con los parametros de busqueda</returns>
         private IList<string> BuscarParametro(string parametro, string encabezado)
         {
             ValidationHelper.NotBlank(parametro);
@@ -88,7 +88,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve la linea que contiene el numero de serie
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve la linea correspondiente al numero de serie</returns>
         public string GetLineaStringNumSerie()
         {
             var result = BuscarParametro(ConstantesDnsBind.NumSerie);
@@ -98,7 +98,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve la linea que contiene el tiempo de actualizacion
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retorna la linea de tiempo de actualizacion</returns>
         public string GetLineaStringTiempoActualizacion()
         {
             var result = BuscarParametro(ConstantesDnsBind.TiempoActualizacion);
@@ -108,7 +108,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve la linea que contiene el tiempo de reintento
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retorna la linea de tiempo de reintento</returns>
         public string GetLineaStringTiempoReintento()
         {
             var result = BuscarParametro(ConstantesDnsBind.TiempoReintento);
@@ -118,7 +118,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve la linea que contiene el tiempo de caducidad
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve la linea de tiempo de caducidad</returns>
         public string GetLineaStringTiempoCaducidad()
         {
             var result = BuscarParametro(ConstantesDnsBind.TiempoCaducidad);
@@ -128,7 +128,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve la linea que contiene el tiempo de vida
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve la linea de tiempo de vida</returns>
         public string GetLineaStringTiempoVida()
         {
             var result = BuscarParametro(ConstantesDnsBind.TiempoVida);
@@ -138,7 +138,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros NS
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve un listado de lineas con el registro NS</returns>
         public IList<string> GetLineaStringNs()
         {
             var result = BuscarParametro(ConstantesDnsBind.Ns);
@@ -148,7 +148,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros MX
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve un listado de lineas con el registro MX</returns>
         public IList<string> GetLineaStringMx()
         {
             var result = BuscarParametro(ConstantesDnsBind.Mx);
@@ -158,7 +158,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros A
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve un listado de lineas con el registro A</returns>
         public IList<string> GetLineaStringA()
         {
             var result = BuscarParametro(ConstantesDnsBind.A);
@@ -168,7 +168,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros AAA
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve un listado de lineas con el registro AAA</returns>
         public IList<string> GetLineaStringAaa()
         {
             var result = BuscarParametro(ConstantesDnsBind.Aaa);
@@ -178,7 +178,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros CNAME
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve un listado de lineas con el registro CNAME</returns>
         public IList<string> GetLineaStringCname()
         {
             var result = BuscarParametro(ConstantesDnsBind.Cname);
@@ -188,7 +188,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros PTR
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve un listado de lineas con el registro PTR</returns>
         public IList<string> GetLineaStringPtr()
         {
             var result = BuscarParametro(ConstantesDnsBind.Ptr);
@@ -198,7 +198,7 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros SPF
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Devuelve un listado de lineas con el registro SPF</returns>
         public IList<string> GetLineaStringSpf()
         {
             var result = BuscarParametro(ConstantesDnsBind.Spf);
@@ -208,8 +208,8 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros A y un encabezado definido
         /// </summary>
-        /// <param name="encabezado"></param>
-        /// <returns></returns>
+        /// <param name="encabezado">Parametro de busqueda</param>
+        /// <returns>Devuelve un listado de strings de las lineas A pero que coinciden con el encabezado</returns>
         public IList<string> GetLineaStringA(string encabezado)
         {
             ValidationHelper.NotBlank(encabezado);
@@ -221,8 +221,8 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros AAA y un encabezado definido
         /// </summary>
-        /// <param name="encabezado"></param>
-        /// <returns></returns>
+        /// <param name="encabezado">Parametro de busqueda</param>
+        /// <returns>Devuelve un listado de strings de las lineas AAA pero que coinciden con el encabezado</returns>
         public IList<string> GetLineaStringAaa(string encabezado)
         {
             ValidationHelper.NotBlank(encabezado);
@@ -234,8 +234,8 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <summary>
         /// Devuelve las lineas que contienen registros CNAME y un encabezado definido
         /// </summary>
-        /// <param name="encabezado"></param>
-        /// <returns></returns>
+        /// <param name="encabezado">Parametro de busqueda</param>
+        /// <returns>Devuelve un listado de strings de las lineas CNAME pero que coinciden con el encabezado</returns>
         public IList<string> GetLineaStringCname(string encabezado)
         {
             ValidationHelper.NotBlank(encabezado);
@@ -244,6 +244,10 @@ namespace DomiLibrary.Utility.Dns.Bind
             return result;
         }
 
+        /// <summary>
+        /// Devuelve el listado de valores referentes a NS
+        /// </summary>
+        /// <returns>Listado de strings</returns>
         private IEnumerable<string> GetValorStringNs()
         {
             var lineas = GetLineaStringNs();
@@ -262,6 +266,10 @@ namespace DomiLibrary.Utility.Dns.Bind
             return resultado;
         }
 
+        /// <summary>
+        /// Devuelve un listado de lineas NS
+        /// </summary>
+        /// <returns>Listado de Linea</returns>
         public IList<Linea> GetLineasNs()
         {
             var result = new List<Linea>();
@@ -280,6 +288,10 @@ namespace DomiLibrary.Utility.Dns.Bind
             return result;
         }
 
+        /// <summary>
+        /// Devuelve un listado de lineas AAA
+        /// </summary>
+        /// <returns>Listado de Linea</returns>
         public IList<Linea> GetLineasAaa()
         {
             var result = new List<Linea>();
@@ -305,6 +317,10 @@ namespace DomiLibrary.Utility.Dns.Bind
             return result;
         }
 
+        /// <summary>
+        /// Devuelve un listado de lineas A
+        /// </summary>
+        /// <returns>Listado de Linea</returns>
         public IList<Linea> GetLineasA()
         {
             var result = new List<Linea>();
@@ -329,6 +345,10 @@ namespace DomiLibrary.Utility.Dns.Bind
             return result;
         }
 
+        /// <summary>
+        /// Devuelve un listado de lineas CNAME
+        /// </summary>
+        /// <returns>Listado de Linea</returns>
         public IList<Linea> GetLineasCname()
         {
             var result = new List<Linea>();
@@ -351,8 +371,12 @@ namespace DomiLibrary.Utility.Dns.Bind
             }
 
             return result;
-        } 
+        }
 
+        /// <summary>
+        /// Devuelve un listado de lineas SPF
+        /// </summary>
+        /// <returns>Listado de Linea</returns>
         public IList<Linea> GetLineasSpf()
         {
             var result = new List<Linea>();
@@ -360,6 +384,10 @@ namespace DomiLibrary.Utility.Dns.Bind
             return result;
         }
 
+        /// <summary>
+        /// Devuelve un listado de lineas PTR
+        /// </summary>
+        /// <returns>Listado de Linea</returns>
         public IList<Linea> GetLineasPtr()
         {
             var result = new List<Linea>();
@@ -367,6 +395,10 @@ namespace DomiLibrary.Utility.Dns.Bind
             return result;
         }
 
+        /// <summary>
+        /// Devuelve todas las lineas de la zona
+        /// </summary>
+        /// <returns>Listado de lineas</returns>
         public IList<Linea> GetLineasZona()
         {
             var result = new List<Linea>();

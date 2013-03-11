@@ -51,9 +51,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Funcion que devuelve la informacion whois al completo, con los datos de contacto
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">Whois server</param>
+        /// <param name="url">Url</param>
+        /// <returns>Informacion del whois</returns>
         public static string GetWhoisInformationComplete(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -72,11 +72,11 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Funcion que devuelve el valor de un dominio pasado una propiedad
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <param name="property"></param>
-        /// <param name="separator"> </param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <param name="property">propiedad de busqueda</param>
+        /// <param name="separator">separador</param>
+        /// <returns>Listado de propiedades del whois</returns>
         public static IList<string> GetValueByProperty(string whoisServer, string url, string property, string separator)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -95,9 +95,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Devuelve el nombre del dominio registado
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <returns>Retorna el nombre del dominio</returns>
         public static string GetDomainName(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -114,9 +114,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Retorna el servidor whois que usa para resolver la peticion
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <returns>Retorna el whois server</returns>
         public static string GetWhoisServer(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -133,9 +133,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Retorna la url de referencia
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <returns>retorna url referencia</returns>
         public static string GetReferralUrl(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -152,9 +152,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Retorna los nombre de servidor asociado al dominio
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <returns>retorna el nombre del servidor NS</returns>
         public static IList<string> GetNameServer(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -173,9 +173,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Retorna el estado del dominio
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <returns>retorna el estado</returns>
         public static string GetStatus(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -192,9 +192,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Retorna la fecha de actualización del dominio
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <returns>retorna la fecha de actualizacion</returns>
         public static string GetUpdateDate(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -211,9 +211,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Retorna la fecha de creacion del dominio
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <returns>retorna la fecha de creacion</returns>
         public static string GetCreationDate(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);
@@ -230,9 +230,9 @@ namespace DomiLibrary.Utility.Network
         /// <summary>
         /// Retorna la fecha de expiracion del dominio
         /// </summary>
-        /// <param name="whoisServer"></param>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="whoisServer">whois server</param>
+        /// <param name="url">url</param>
+        /// <returns>retorna la fecha de expiracion</returns>
         public static string GetExpirationDate(string whoisServer, string url)
         {
             ValidationHelper.NotBlank(whoisServer);

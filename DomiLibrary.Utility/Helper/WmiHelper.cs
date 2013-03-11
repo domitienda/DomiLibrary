@@ -11,10 +11,10 @@ namespace DomiLibrary.Utility.Helper
         /// <summary>
         /// Invoca un comando en un servidor remotamente.
         /// </summary>
-        /// <param name="ipServer"></param>
-        /// <param name="user"></param>
-        /// <param name="password"></param>
-        /// <param name="command"></param>
+        /// <param name="ipServer">IP del servidor</param>
+        /// <param name="user">Usuario</param>
+        /// <param name="password">Clave</param>
+        /// <param name="command">Comando de ejecucion</param>
         /// <returns></returns>
         public static string InvokeRemoteCommand(string ipServer, string user, string password, string command)
         {

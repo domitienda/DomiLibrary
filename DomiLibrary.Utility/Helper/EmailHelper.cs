@@ -13,14 +13,14 @@ namespace DomiLibrary.Utility.Helper
         /// Metodo que envía un mail pasando los parametros requeridos
         /// Usa credenciales para poder conectarse con el servidor SMTP
         /// </summary>
-        /// <param name="usuario"></param>
-        /// <param name="clave"></param>
-        /// <param name="from"></param>
-        /// <param name="to"></param>
-        /// <param name="servidor"></param>
-        /// <param name="puerto"></param>
-        /// <param name="asunto"></param>
-        /// <param name="cuerpo"></param>
+        /// <param name="usuario">Nombre de usuario</param>
+        /// <param name="clave">Clave de usuario</param>
+        /// <param name="from">Email desde donde se envia</param>
+        /// <param name="to">Email que recibira el email</param>
+        /// <param name="servidor">IP del servidor de envio</param>
+        /// <param name="puerto">Puerto del servidor de envio</param>
+        /// <param name="asunto">Asunto del email</param>
+        /// <param name="cuerpo">Cuerpo del email</param>
         public static void SendEmail(string usuario, string clave, string from, string to, 
             string servidor, int puerto, string asunto, string cuerpo)
         {
