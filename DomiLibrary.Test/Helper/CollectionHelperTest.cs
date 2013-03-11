@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DomiLibrary.Test.Helper.EntityTest;
 using DomiLibrary.Utility.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -65,6 +66,24 @@ namespace DomiLibrary.Test.Helper
             list.Add(1);
             var result = CollectionHelper.IsEmpty(list);
             Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void SubtractTest1()
+        {
+            var a = new List<Extension>
+                        {
+                            new Extension(1, "1"), 
+                            new Extension(2, "2"), 
+                            new Extension(3, "3")
+                        };
+            var b = new List<Extension>
+                        {
+                            new Extension(1, "1")
+                        };
+
+            var result = CollectionHelper.Subtract(a, b);
+            Assert.AreEqual(2, result.Count);
         }
     }
 }
