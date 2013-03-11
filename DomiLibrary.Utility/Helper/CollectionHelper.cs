@@ -72,7 +72,7 @@ namespace DomiLibrary.Utility.Helper
             ValidationHelper.NotNull(a, "El paramentro a es nulo");
             ValidationHelper.NotNull(b, "El paramentro b es nulo");
 
-            var result = new List<T>();
+            var result = new List<T>(a);
 
             foreach (var item in b)
             {

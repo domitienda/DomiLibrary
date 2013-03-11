@@ -15,7 +15,7 @@
         protected bool Equals(Extension entity)
         {
             if (entity == null) return false;
-            if (!Equals(Id, entity.Id)) return false;
+            if (!Equals(Nombre, entity.Nombre)) return false;
             return true;
         }
 
@@ -28,7 +28,7 @@
         public override int GetHashCode()
         {
             var result = base.GetHashCode();
-            result = 29 * result + Id.GetHashCode();
+            result = 29 * result + Nombre.GetHashCode();
             return result;
         }
     }
