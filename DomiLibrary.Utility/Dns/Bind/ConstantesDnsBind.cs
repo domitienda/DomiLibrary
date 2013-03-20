@@ -8,13 +8,13 @@
         public const string TiempoCaducidad = "expire";
         public const string TiempoVida = "ttl";
 
-        public const string Ns = "\tNS\t";
-        public const string Mx = "\tMX\t";
-        public const string A = "\tA\t";
-        public const string Aaa = "\tAAA\t";
-        public const string Cname = "\tCNAME\t";
-        public const string Ptr = "\tPTR\t";
-        public const string Spf = "\tSPF\t";
+        public const string Ns = "NS\t";
+        public const string Mx = "MX\t";
+        public const string A = "A\t";
+        public const string Aaa = "AAA\t";
+        public const string Cname = "CNAME\t";
+        public const string Ptr = "PTR\t";
+        public const string Spf = "SPF\t";
 
         public const string NsNormalizado = "NS";
         public const string MxNormalizado = "MX";

@@ -40,6 +40,7 @@ namespace DomiLibrary.Utility.Dns.Bind
             var result = new List<string>();
             string linea;
 
+            _fichero.BaseStream.Position = 0;
             while ((linea = _fichero.ReadLine()) != null)
             {
                 var lineaNormalizada = linea.ToLower();
@@ -69,6 +70,7 @@ namespace DomiLibrary.Utility.Dns.Bind
             var result = new List<string>();
             string linea;
 
+            _fichero.BaseStream.Position = 0;
             while ((linea = _fichero.ReadLine()) != null)
             {
                 var lineaNormalizada = linea.ToLower();
@@ -306,7 +308,7 @@ namespace DomiLibrary.Utility.Dns.Bind
                 {
                     var linea = new Linea
                     {
-                        TipoRegistro = ConstantesDnsBind.NsNormalizado,
+                        TipoRegistro = ConstantesDnsBind.AaaNormalizado,
                         Valor = valor,
                         Nombre = encabezado
                     };
@@ -334,7 +336,7 @@ namespace DomiLibrary.Utility.Dns.Bind
                 {
                     var linea = new Linea
                     {
-                        TipoRegistro = ConstantesDnsBind.NsNormalizado,
+                        TipoRegistro = ConstantesDnsBind.ANormalizado,
                         Valor = valor,
                         Nombre = encabezado
                     };
@@ -362,7 +364,7 @@ namespace DomiLibrary.Utility.Dns.Bind
                 {
                     var linea = new Linea
                     {
-                        TipoRegistro = ConstantesDnsBind.NsNormalizado,
+                        TipoRegistro = ConstantesDnsBind.CnameNormalizado,
                         Valor = valor,
                         Nombre = encabezado
                     };
