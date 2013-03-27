@@ -15,6 +15,7 @@
         public const string Cname = "CNAME\t";
         public const string Ptr = "PTR\t";
         public const string Spf = "SPF\t";
+        public const string Txt = "TXT\t";
 
         public const string NsNormalizado = "NS";
         public const string MxNormalizado = "MX";
@@ -23,5 +24,6 @@
         public const string CnameNormalizado = "CNAME";
         public const string PtrNormalizado = "PTR";
         public const string SpfNormalizado = "SPF";
+        public const string TxtNormalizado = "TXT";
     }
 }

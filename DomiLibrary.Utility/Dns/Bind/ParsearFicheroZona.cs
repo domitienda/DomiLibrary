@@ -168,6 +168,16 @@ namespace DomiLibrary.Utility.Dns.Bind
         }
 
         /// <summary>
+        /// Devuelve las lineas que contienen registros TXT
+        /// </summary>
+        /// <returns>Devuelve un listado de lineas con el registro TXT</returns>
+        public IList<string> GetLineaStringTxt()
+        {
+            var result = BuscarParametro(ConstantesDnsBind.Txt);
+            return result;
+        }
+
+        /// <summary>
         /// Devuelve las lineas que contienen registros AAA
         /// </summary>
         /// <returns>Devuelve un listado de lineas con el registro AAA</returns>
@@ -369,6 +379,35 @@ namespace DomiLibrary.Utility.Dns.Bind
         }
 
         /// <summary>
+        /// Devuelve un listado de lineas TXT
+        /// </summary>
+        /// <returns>Listado de Linea</returns>
+        public IList<Linea> GetLineasTxt()
+        {
+            var result = new List<Linea>();
+            var lineasString = GetLineaStringTxt();
+
+            foreach (var lineaString in lineasString)
+            {
+                var encabezado = lineaString.Split(' ')[0];
+                encabezado = ParsearEncabezado(encabezado);
+                var valor = ParsearValor(lineaString);
+                if (valor != null && valor.Equals(string.Empty) == false)
+                {
+                    var linea = new Linea
+                    {
+                        TipoRegistro = ConstantesDnsBind.TxtNormalizado,
+                        Valor = valor,
+                        Nombre = encabezado
+                    };
+                    result.Add(linea);
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Devuelve un listado de lineas CNAME
         /// </summary>
         /// <returns>Listado de Linea</returns>
@@ -432,6 +471,7 @@ namespace DomiLibrary.Utility.Dns.Bind
             result.AddRange(GetLineasNs());
             result.AddRange(GetLineasSpf());
             result.AddRange(GetLineasPtr());
+            result.AddRange(GetLineasTxt());
 
             return result;
         } 
