@@ -63,5 +63,13 @@ namespace DomiLibrary.Test.Helper
             var result = StringHelper.ToPascalCase("holaMeLlamo ivan");
             Assert.AreEqual("HolaMeLlamoIvan", result);
         }
+
+        [TestMethod]
+        public void Remove()
+        {
+            var arrayCharacters = new char[] {'a', 'v'};
+            var result = StringHelper.Remove("Ivan", arrayCharacters);
+            Assert.AreEqual("In", result);
+        }
     }
 }

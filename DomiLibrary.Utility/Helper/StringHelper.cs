@@ -220,5 +220,39 @@ namespace DomiLibrary.Utility.Helper
 
             return memoryStream;
         }
+
+        /// <summary>
+        /// Funcion que elimina de una cadena de entrada todos los caracteres
+        /// definidos en el array de char.
+        /// </summary>
+        /// <param name="input">Parametro de entrada. Not blank.</param>
+        /// <param name="charactersRemove">Array de caracteres para eliminar. Not Null.</param>
+        /// <returns></returns>
+        public static string Remove(string input, char[] charactersRemove)
+        {
+            ValidationHelper.NotBlank(input);
+            ValidationHelper.NotNull(charactersRemove);
+
+            var result = string.Empty;
+            foreach (var a in input)
+            {
+                var existe = false;
+                foreach (var characterRemove in charactersRemove)
+                {
+                    if(a.Equals(characterRemove))
+                    {
+                        existe = true;
+                        break;
+                    }
+                }
+
+                if(!existe)
+                {
+                    result += a;
+                }
+            }
+
+            return result;
+        }
     }
 }

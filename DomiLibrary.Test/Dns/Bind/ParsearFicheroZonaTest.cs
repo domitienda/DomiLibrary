@@ -186,5 +186,14 @@ namespace DomiLibrary.Test.Dns.Bind
 
             Assert.AreEqual(2, result.Count);
         }
+
+        [TestMethod]
+        public void GetLineasZonaTest()
+        {
+            var streamReader = new StreamReader(@"C:\Users\Ivan\Desktop\ivanoliver.com.db.dns");
+            var parsearFicheroZona = new ParsearFicheroZona(streamReader);
+            var result = parsearFicheroZona.GetLineasZona();
+            Assert.AreEqual(6, result.Count);
+        }
     }
 }

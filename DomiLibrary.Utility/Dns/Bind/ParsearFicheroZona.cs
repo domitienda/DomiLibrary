@@ -259,13 +259,33 @@ namespace DomiLibrary.Utility.Dns.Bind
             {
                 var valores = linea.Split(' ');
                 var valor = valores[valores.Length - 1];
-                if(valor != null && valor.Equals(string.Empty) == false)
+                valor = ParsearValor(valor);
+                if (valor != null && valor.Equals(string.Empty) == false)
                 {
                     resultado.Add(valor);
                 }
             }
 
             return resultado;
+        }
+
+        private static string ParsearValor(string input)
+        {
+            var valorParseado = input.Split('\t')[input.Split('\t').Length - 1];
+            if(valorParseado.EndsWith("."))
+            {
+                valorParseado = valorParseado.TrimEnd('.');
+            }
+
+            return valorParseado;
+        }
+
+        private static string ParsearEncabezado(string input)
+        {
+            var arrayCharacters = new char[] {'@'};
+            var result = StringHelper.Remove(input, arrayCharacters);
+
+            return result;
         }
 
         /// <summary>
@@ -331,7 +351,8 @@ namespace DomiLibrary.Utility.Dns.Bind
             foreach (var lineaString in lineasString)
             {
                 var encabezado = lineaString.Split(' ')[0];
-                var valor = lineaString.Split('\t')[lineaString.Split('\t').Length - 1];
+                encabezado = ParsearEncabezado(encabezado);
+                var valor = ParsearValor(lineaString);
                 if (valor != null && valor.Equals(string.Empty) == false)
                 {
                     var linea = new Linea
@@ -359,7 +380,7 @@ namespace DomiLibrary.Utility.Dns.Bind
             foreach (var lineaString in lineasString)
             {
                 var encabezado = lineaString.Split(' ')[0];
-                var valor = lineaString.Split('\t')[lineaString.Split('\t').Length - 1];
+                var valor = ParsearValor(lineaString);
                 if (valor != null && valor.Equals(string.Empty) == false)
                 {
                     var linea = new Linea
