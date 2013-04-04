@@ -62,6 +62,7 @@
     <Compile Include="Dns\Bind\ParsearFicheroZona.cs" />
     <Compile Include="Encoding\PunyCode\PunyCode.cs" />
     <Compile Include="Encoding\PunyCode\PunyCodeException.cs" />
+    <Compile Include="Encryptation\OAuthBase.cs" />
     <Compile Include="Encryptation\SimplerAES.cs" />
     <Compile Include="GenericException\BusinessException.cs" />
     <Compile Include="Helper\BooleanHelper.cs" />
