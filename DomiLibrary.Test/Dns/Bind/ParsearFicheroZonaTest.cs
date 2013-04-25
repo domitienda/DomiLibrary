@@ -188,12 +188,30 @@ namespace DomiLibrary.Test.Dns.Bind
         }
 
         [TestMethod]
-        public void GetLineasZonaTest()
+        public void GetLineasZonaTest1()
         {
-            var streamReader = new StreamReader(@"C:\Users\Ivan\Desktop\antoniogildelosrios.com.dns.txt");
+            var streamReader = new StreamReader(@"C:\Users\Ivan\Desktop\adiosssss.com.txt");
             var parsearFicheroZona = new ParsearFicheroZona(streamReader);
             var result = parsearFicheroZona.GetLineasZona();
             Assert.AreEqual(7, result.Count);
+        }
+
+        [TestMethod]
+        public void GetLineasZonaTest2()
+        {
+            var streamReader = new StreamReader(@"C:\Users\Ivan\Desktop\ivanoliver.com.txt");
+            var parsearFicheroZona = new ParsearFicheroZona(streamReader);
+            var result = parsearFicheroZona.GetLineasZona();
+            Assert.AreEqual(6, result.Count);
+        }
+
+        [TestMethod]
+        public void GetLineasZonaTest3()
+        {
+            var streamReader = new StreamReader(@"C:\Users\Ivan\Desktop\unvoluntariounarbol.com.txt");
+            var parsearFicheroZona = new ParsearFicheroZona(streamReader);
+            var result = parsearFicheroZona.GetLineasZona();
+            Assert.AreEqual(6, result.Count);
         }
     }
 }

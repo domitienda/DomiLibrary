@@ -27,6 +27,24 @@ namespace DomiLibrary.Utility.Dns.Bind
 
         #region Methods
 
+        private IList<string> BuscarParametros(IEnumerable<string> parametros)
+        {
+            ValidationHelper.NotNull(parametros);
+
+            var result = new List<string>();
+
+            foreach (var parametro in parametros)
+            {
+                var aux = BuscarParametro(parametro);
+                if (aux != null)
+                {
+                    result.AddRange(aux);
+                }
+            }
+
+            return result;
+        } 
+
         /// <summary>
         /// Funcion encargada de devolver las lineas que coinciden con el 
         /// parametro de busqueda dentro del streamreader
@@ -54,6 +72,25 @@ namespace DomiLibrary.Utility.Dns.Bind
 
             return result;
         }
+
+        private IList<string> BuscarParametro(IEnumerable<string> parametros, string encabezado)
+        {
+            ValidationHelper.NotNull(parametros);
+            ValidationHelper.NotBlank(encabezado);
+
+            var result = new List<string>();
+
+            foreach (var parametro in parametros)
+            {
+                var aux = BuscarParametro(parametro, encabezado);
+                if(aux != null)
+                {
+                    result.AddRange(aux);
+                }
+            }
+
+            return result;
+        } 
 
         /// <summary>
         /// Funcion encargada de devolver las lineas que coinciden con el
@@ -143,7 +180,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <returns>Devuelve un listado de lineas con el registro NS</returns>
         public IList<string> GetLineaStringNs()
         {
-            var result = BuscarParametro(ConstantesDnsBind.Ns);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Ns, 
+                                     " " + ConstantesDnsBind.NsNormalizado + " "
+                                 };
+            var result = BuscarParametros(parametros);
             return result;
         }
 
@@ -153,7 +195,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <returns>Devuelve un listado de lineas con el registro MX</returns>
         public IList<string> GetLineaStringMx()
         {
-            var result = BuscarParametro(ConstantesDnsBind.Mx);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Mx, 
+                                     " " + ConstantesDnsBind.MxNormalizado + " "
+                                 };
+            var result = BuscarParametros(parametros);
             return result;
         }
 
@@ -163,7 +210,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <returns>Devuelve un listado de lineas con el registro A</returns>
         public IList<string> GetLineaStringA()
         {
-            var result = BuscarParametro(ConstantesDnsBind.A);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.A, 
+                                     " " + ConstantesDnsBind.ANormalizado + " "
+                                 };
+            var result = BuscarParametros(parametros);
             return result;
         }
 
@@ -173,7 +225,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <returns>Devuelve un listado de lineas con el registro TXT</returns>
         public IList<string> GetLineaStringTxt()
         {
-            var result = BuscarParametro(ConstantesDnsBind.Txt);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Txt, 
+                                     " " + ConstantesDnsBind.TxtNormalizado + " "
+                                 };
+            var result = BuscarParametros(parametros);
             return result;
         }
 
@@ -183,7 +240,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <returns>Devuelve un listado de lineas con el registro AAA</returns>
         public IList<string> GetLineaStringAaa()
         {
-            var result = BuscarParametro(ConstantesDnsBind.Aaa);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Aaa, 
+                                     " " + ConstantesDnsBind.AaaNormalizado + " "
+                                 };
+            var result = BuscarParametros(parametros);
             return result;
         }
 
@@ -193,7 +255,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <returns>Devuelve un listado de lineas con el registro CNAME</returns>
         public IList<string> GetLineaStringCname()
         {
-            var result = BuscarParametro(ConstantesDnsBind.Cname);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Cname, 
+                                     " " + ConstantesDnsBind.CnameNormalizado + " "
+                                 };
+            var result = BuscarParametros(parametros);
             return result;
         }
 
@@ -203,7 +270,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <returns>Devuelve un listado de lineas con el registro PTR</returns>
         public IList<string> GetLineaStringPtr()
         {
-            var result = BuscarParametro(ConstantesDnsBind.Ptr);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Ptr, 
+                                     " " + ConstantesDnsBind.PtrNormalizado + " "
+                                 };
+            var result = BuscarParametros(parametros);
             return result;
         }
 
@@ -213,7 +285,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         /// <returns>Devuelve un listado de lineas con el registro SPF</returns>
         public IList<string> GetLineaStringSpf()
         {
-            var result = BuscarParametro(ConstantesDnsBind.Spf);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Spf, 
+                                     " " + ConstantesDnsBind.SpfNormalizado + " "
+                                 };
+            var result = BuscarParametros(parametros);
             return result;
         }
 
@@ -226,7 +303,13 @@ namespace DomiLibrary.Utility.Dns.Bind
         {
             ValidationHelper.NotBlank(encabezado);
 
-            var result = BuscarParametro(ConstantesDnsBind.A, encabezado);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.A, 
+                                     " " + ConstantesDnsBind.ANormalizado + " "
+                                 };
+
+            var result = BuscarParametro(parametros, encabezado);
             return result;
         }
 
@@ -239,7 +322,13 @@ namespace DomiLibrary.Utility.Dns.Bind
         {
             ValidationHelper.NotBlank(encabezado);
 
-            var result = BuscarParametro(ConstantesDnsBind.Aaa, encabezado);
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Aaa, 
+                                     " " + ConstantesDnsBind.AaaNormalizado + " "
+                                 };
+
+            var result = BuscarParametro(parametros, encabezado);
             return result;
         }
 
@@ -251,6 +340,12 @@ namespace DomiLibrary.Utility.Dns.Bind
         public IList<string> GetLineaStringCname(string encabezado)
         {
             ValidationHelper.NotBlank(encabezado);
+
+            var parametros = new List<string>
+                                 {
+                                     ConstantesDnsBind.Cname, 
+                                     " " + ConstantesDnsBind.CnameNormalizado + " "
+                                 };
 
             var result = BuscarParametro(ConstantesDnsBind.Cname, encabezado);
             return result;
@@ -267,6 +362,7 @@ namespace DomiLibrary.Utility.Dns.Bind
 
             foreach (var linea in lineas)
             {
+                if (linea.StartsWith(";")) continue;
                 var valores = linea.Split(' ');
                 var valor = valores[valores.Length - 1];
                 valor = ParsearValor(valor);
@@ -281,8 +377,21 @@ namespace DomiLibrary.Utility.Dns.Bind
 
         private static string ParsearValor(string input)
         {
-            var valorParseado = input.Split('\t')[input.Split('\t').Length - 1];
+            //var valorParseado = input.Split('\t')[input.Split('\t').Length - 1];
+            var valorParseado = input.Split(' ')[input.Split(' ').Length - 1];
             if(valorParseado.EndsWith("."))
+            {
+                valorParseado = valorParseado.TrimEnd('.');
+            }
+
+            return valorParseado;
+        }
+
+        private static string ParsearValorMx(string input)
+        {
+            //var valorParseado = input.Split('\t')[input.Split('\t').Length - 1];
+            var valorParseado = input.Split(' ')[input.Split(' ').Length - 2] + " " + input.Split(' ')[input.Split(' ').Length - 1];
+            if (valorParseado.EndsWith("."))
             {
                 valorParseado = valorParseado.TrimEnd('.');
             }
@@ -436,6 +545,35 @@ namespace DomiLibrary.Utility.Dns.Bind
         }
 
         /// <summary>
+        /// Devuelve un listado de lineas MX
+        /// </summary>
+        /// <returns>Listado de Linea</returns>
+        public IList<Linea> GetLineasMx()
+        {
+            var result = new List<Linea>();
+            var lineasString = GetLineaStringMx();
+
+            foreach (var lineaString in lineasString)
+            {
+                var encabezado = lineaString.Split(' ')[0];
+                encabezado = ParsearEncabezado(encabezado);
+                var valor = ParsearValorMx(lineaString);
+                if (valor != null && valor.Equals(string.Empty) == false)
+                {
+                    var linea = new Linea
+                    {
+                        TipoRegistro = ConstantesDnsBind.MxNormalizado,
+                        Valor = valor,
+                        Nombre = encabezado
+                    };
+                    result.Add(linea);
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Devuelve un listado de lineas SPF
         /// </summary>
         /// <returns>Listado de Linea</returns>
@@ -468,6 +606,7 @@ namespace DomiLibrary.Utility.Dns.Bind
             result.AddRange(GetLineasA());
             result.AddRange(GetLineasAaa());
             result.AddRange(GetLineasCname());
+            result.AddRange(GetLineasMx());
             result.AddRange(GetLineasNs());
             result.AddRange(GetLineasSpf());
             result.AddRange(GetLineasPtr());
