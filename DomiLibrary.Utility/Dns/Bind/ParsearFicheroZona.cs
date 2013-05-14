@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using DomiLibrary.Utility.Helper;
 
@@ -61,13 +62,17 @@ namespace DomiLibrary.Utility.Dns.Bind
             _fichero.BaseStream.Position = 0;
             while ((linea = _fichero.ReadLine()) != null)
             {
-                var lineaNormalizada = linea.ToLower();
-                var parametroNormalizado = parametro.ToLower();
-
-                if(lineaNormalizada.Contains(parametroNormalizado))
+                if(linea.Contains(parametro))
                 {
                     result.Add(linea);
                 }
+                //var lineaNormalizada = linea.ToLower();
+                //var parametroNormalizado = parametro.ToLower();
+
+                //if(lineaNormalizada.Contains(parametroNormalizado))
+                //{
+                //    result.Add(linea);
+                //}
             }
 
             return result;
@@ -377,7 +382,7 @@ namespace DomiLibrary.Utility.Dns.Bind
 
         private static string ParsearValor(string input)
         {
-            //var valorParseado = input.Split('\t')[input.Split('\t').Length - 1];
+            input = input.Replace('\t', ' ');
             var valorParseado = input.Split(' ')[input.Split(' ').Length - 1];
             if(valorParseado.EndsWith("."))
             {
@@ -387,13 +392,28 @@ namespace DomiLibrary.Utility.Dns.Bind
             return valorParseado;
         }
 
-        private static string ParsearValorMx(string input)
+        private static string ParsearValorTxt(string input)
         {
-            //var valorParseado = input.Split('\t')[input.Split('\t').Length - 1];
-            var valorParseado = input.Split(' ')[input.Split(' ').Length - 2] + " " + input.Split(' ')[input.Split(' ').Length - 1];
+            input = input.Replace('\t', ' ');
+            var valorParseado = input.Substring(input.IndexOf(" " + ConstantesDnsBind.TxtNormalizado + " ", System.StringComparison.Ordinal) + 4);
             if (valorParseado.EndsWith("."))
             {
                 valorParseado = valorParseado.TrimEnd('.');
+            }
+
+            return valorParseado;
+        }
+
+        private static string ParsearValorMx(string input)
+        {
+            input = input.Replace('\t', ' ');
+            var separator = new char[1];
+            separator[0] = ' ';
+            var split = input.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            var valorParseado = split[split.Length - 1] + " " + split[split.Length - 2];
+            if (split[split.Length - 1].EndsWith("."))
+            {
+                valorParseado = split[split.Length - 1].TrimEnd('.') + " " + split[split.Length - 2];
             }
 
             return valorParseado;
@@ -500,7 +520,7 @@ namespace DomiLibrary.Utility.Dns.Bind
             {
                 var encabezado = lineaString.Split(' ')[0];
                 encabezado = ParsearEncabezado(encabezado);
-                var valor = ParsearValor(lineaString);
+                var valor = ParsearValorTxt(lineaString);
                 if (valor != null && valor.Equals(string.Empty) == false)
                 {
                     var linea = new Linea

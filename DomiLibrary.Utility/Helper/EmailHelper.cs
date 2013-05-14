@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
+using DomiLibrary.Utility.Email;
 
 namespace DomiLibrary.Utility.Helper
 {
@@ -21,8 +22,9 @@ namespace DomiLibrary.Utility.Helper
         /// <param name="puerto">Puerto del servidor de envio</param>
         /// <param name="asunto">Asunto del email</param>
         /// <param name="cuerpo">Cuerpo del email</param>
+        /// <param name="ssl">Define si se usa SSL</param>
         public static void SendEmail(string usuario, string clave, string from, string to, 
-            string servidor, int puerto, string asunto, string cuerpo)
+            string servidor, int puerto, string asunto, string cuerpo, bool ssl)
         {
             var fromAddress = new MailAddress(from);
             var toAddress = new MailAddress(to);
@@ -33,7 +35,7 @@ namespace DomiLibrary.Utility.Helper
             {
                 Host = servidor,
                 Port = puerto,
-                EnableSsl = false,
+                EnableSsl = ssl,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
                 Credentials = new NetworkCredential(usuario, clave)
@@ -54,6 +56,23 @@ namespace DomiLibrary.Utility.Helper
                     throw new Exception(ex.Message);
                 }
             }
+        }
+
+        /// <summary>
+        /// Metodo que envía un mail pasando los parametros requeridos
+        /// Usa credenciales para poder conectarse con el servidor SMTP
+        /// </summary>
+        /// <param name="configEmail">Clase que define la configuración del servidor de correo</param>
+        /// <param name="from">Desde</param>
+        /// <param name="to">Hacia</param>
+        /// <param name="asunto">Asunto</param>
+        /// <param name="cuerpo">Cuerpo</param>
+        public static void SendEmail(ConfigEmail configEmail, string from, string to, 
+            string asunto, string cuerpo)
+        {
+            SendEmail(configEmail.NombreUsuario, configEmail.ClaveUsuario, 
+                from, to, configEmail.IpServidor, configEmail.PuertoServidor, 
+                asunto, cuerpo, configEmail.Ssl);
         }
     }
 }

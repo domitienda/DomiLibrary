@@ -48,12 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dns\Bind\ParsearFicheroZonaTest.cs" />
+    <Compile Include="EmailTemplate\EmailTemplateTest.cs" />
     <Compile Include="Helper\ClassMappingHelperTest.cs" />
     <Compile Include="Helper\CollectionHelperTest.cs" />
     <Compile Include="Helper\EntityTest\A.cs" />
     <Compile Include="Helper\EntityTest\B.cs" />
     <Compile Include="Helper\EntityTest\C.cs" />
     <Compile Include="Helper\EntityTest\Extension.cs" />
+    <Compile Include="Helper\FileHelperTest.cs" />
     <Compile Include="Helper\MemberHelperTest.cs" />
     <Compile Include="Helper\StringHelperTest.cs" />
     <Compile Include="Helper\ValidationHelperTest.cs" />
@@ -70,6 +72,7 @@
       <Name>DomiLibrary.Utility</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
