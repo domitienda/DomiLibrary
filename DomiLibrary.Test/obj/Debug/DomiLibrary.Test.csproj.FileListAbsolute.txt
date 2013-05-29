@@ -5,8 +5,6 @@ C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrar
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Common.Logging.dll
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\log4net.dll
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\DomiLibrary.Utility.pdb
-C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Common.Logging.pdb
-C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\Common.Logging.xml
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\bin\Debug\log4net.xml
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.csprojResolveAssemblyReference.cache
 C:\Users\Ivan\Documents\GitHub\DomiLibrary\DomiLibrary.Test\obj\Debug\DomiLibrary.Test.dll

@@ -396,10 +396,8 @@ namespace DomiLibrary.Utility.Dns.Bind
         {
             input = input.Replace('\t', ' ');
             var valorParseado = input.Substring(input.IndexOf(" " + ConstantesDnsBind.TxtNormalizado + " ", System.StringComparison.Ordinal) + 4);
-            if (valorParseado.EndsWith("."))
-            {
-                valorParseado = valorParseado.TrimEnd('.');
-            }
+            valorParseado = valorParseado.Remove(0, 2);
+            valorParseado = valorParseado.TrimEnd('\"');
 
             return valorParseado;
         }
@@ -410,10 +408,10 @@ namespace DomiLibrary.Utility.Dns.Bind
             var separator = new char[1];
             separator[0] = ' ';
             var split = input.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-            var valorParseado = split[split.Length - 1] + " " + split[split.Length - 2];
+            var valorParseado = split[split.Length - 2] + " " + split[split.Length - 1];
             if (split[split.Length - 1].EndsWith("."))
             {
-                valorParseado = split[split.Length - 1].TrimEnd('.') + " " + split[split.Length - 2];
+                valorParseado =  split[split.Length - 2] + " " + split[split.Length - 1].TrimEnd('.');
             }
 
             return valorParseado;

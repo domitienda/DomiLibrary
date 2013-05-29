@@ -208,7 +208,7 @@ namespace DomiLibrary.Test.Dns.Bind
         [TestMethod]
         public void GetLineasZonaTest3()
         {
-            var streamReader = new StreamReader(@"C:\Users\Ivan\Desktop\liststwitter.com.txt");
+            var streamReader = new StreamReader(@"C:\Users\Ivan\Desktop\hola.com.db.dns");
             var parsearFicheroZona = new ParsearFicheroZona(streamReader);
             var result = parsearFicheroZona.GetLineasZona();
             Assert.AreEqual(6, result.Count);
